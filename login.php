@@ -7,10 +7,10 @@
 <body>
 	<h1>Iniciar sesión</h1>
 
-	<form method="POST" action="ControlSesion.php">
+	<form method="POST" action="ControlSesionLogin.php">
 		<?php
 		 if(isset($_GET['error']) && $_GET['error']==true ){
-		print("<h4>Error:Nombre de uusuario o contraseña invalido</h4><br>");
+		print("<h4>Error:Nombre de usuario o contraseña invalido</h4><br>");
 			}
 		?>
 		<label>Usuario:</label>
