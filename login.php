@@ -19,7 +19,7 @@
 			<input type="password" name="contrasena"><br><br>
         <input type="submit" name="enviar" value="login"><br><br>
         <label>¿No tienes una cuenta?</label><a href="registro.php">Registrate</a><br>
-        <a href="">¿Olvidaste tu contraseña?</a>
+        <a href="recuperarcontrasena.php">¿Olvidaste tu contraseña?</a>
 
 	</form>
 
