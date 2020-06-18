@@ -11,13 +11,44 @@
     $tel = $_POST['celular'];
     $tiempo = $_POST['tiempo'];
     $razon = $_POST['razon'];
+    $nombre_animal = $_POST['nombre_A'];
+    $especie = $_POST['animals_list'];
+    $fecha_nacimiento = $_POST['fecha_nacimiento'];
+    $sex = $_POST['animals_sex'];
+    $tamaño = $_POST['tamaño_animal'];
+    $peso = $_POST['peso'];
+    if(isset($_POST['vacunado'])){
+        $vacunado = 'si';
+    }
+    else{
+        $vacunado = 'no';
+    }
+    if(isset($_POST['desparacitado'])){
+        $desparacitado = 'si';
+    }
+    else{
+        $desparacitado = 'no';
+    }
+    if(isset($_POST['sano'])){
+        $sano = 'si';
+    }
+    else{
+        $sano = 'no';
+    }
+    if(isset($_POST['microchip'])){
+        $microchip = 'si';
+    }
+    else{
+        $microchip = 'no';
+    }
 
     #sentencia
-    $sql = "INSERT INTO usuario (nombre,correo, tel,tiempo,razón) VALUES('$nombre',
+    $sql = "INSERT INTO dar_adopcion VALUES('$nombre',
                                         '$correo',
                                         '$tel',
                                         '$tiempo',
-                                        '$razon')";
+                                        '$razon','$nombre_animal','$especie','$fecha_nacimiento','$sex','$tamaño',
+                                        '$peso','$vacunado','$desparacitado','$sano','$microchip')";
     $ejecutar = $conectar->query($sql);
 
     if(!$ejecutar){

@@ -56,14 +56,14 @@
             <br>
 
             <label for="sex">Sexo: </label>
-            <select id="sex" name="animals_sex" form="animals">
+            <select id="sex" name="animals_sex" form="animals" required>
                 <option value="Masculino">Masculino</option>
                 <option value="Femenino">Femenino</option>
             </select>
             <br>
 
             <label for="tamaño">Tamaño: </label>
-            <select id="tamaño" name="tamaño_animal" form="animals">
+            <select id="tamaño" name="tamaño_animal" form="animals" required>
                 <option value="Pequeño">Pequeño</option>
                 <option value="Mediano">Mediano</option>
                 <option value="Grande">Grande</option>
@@ -73,6 +73,23 @@
             <label>Peso (en kg):</label>
             <input type="number" name="peso" placeholder="3" required>
             <br>
+            <br>
+            <br>
+            <h2>Estado del animal</h2>
+
+            <input type="checkbox" name="vacunado" id="vacunado">
+            <label for="vacunado"> Vacunado</label><br>
+
+            <input type="checkbox" name="desparacitado" id="desparacitado" >
+            <label for="desparacitado"> Desparacitado</label><br>
+
+            <input type="checkbox" name="sano" id="sano">
+            <label for="sano"> Sano</label><br>
+
+            <input type="checkbox" name="microchip" id="microchip">
+            <label for="microchip"> Microchip</label><br>
+
+
 
 
 
