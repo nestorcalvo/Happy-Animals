@@ -10,7 +10,38 @@
     
 </head>
 <body>
+    <h2>Datos personales</h2>
+    <div class="form">
+        <form action="form1.php" method="post" id="animals">
+            <br>
+            <label>Nombre: </label>
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <br>
 
+            <label>Correo: </label>
+            <input type="email" name="correo" placeholder="ejemplo@correo.com" required>
+            <br>
+
+            <label>Numero de celular: </label>
+            <input type="number" name="celular" placeholder="3000000001" required>
+            <br>
+
+            <label>Cuanto tiempo lleva con la mascota (tiempo en dias): </label>
+            <input type="number" name="tiempo" placeholder="20" required>
+            <br>
+
+            <label>Explique las razones de porque desea dar en adopcion a la mascota: </label>
+            <br>
+            <input type="text" name="razon" placeholder="Siento que no tengo espacio para mantenerla..." required
+                size="50" style="height: 200px">
+            <br>
+            <br>
+            <br>
+
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
 
 </body>
 </html>
