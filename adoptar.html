@@ -9,6 +9,53 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 <body>
+    <h2>Datos personales</h2>
+    <div class="form">
+        <form action="php/form2.php" method="post" id="adopt_animals">
+            <br>
+            <label>Nombre: </label>
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <br>
+            <label>Correo: </label>
+            <input type="email" name="correo" placeholder="ejemplo@correo.com" required>
+            <br>
 
+            <label>Numero de celular: </label>
+            <input type="number" name="celular" placeholder="3000000001" required>
+            <br>
+            <label>Ingrese sus ingresos mensuales (en USD): </label>
+            <input type="number" name="ingresos" placeholder="1500" required>
+            <br>
+            <label>Cuanto tiempo del dia suele estar en casa (en horas): </label>
+            <input type="number" name="tiempo" placeholder="15" required>
+            <br>
+
+            <label>Cuantas personas viven en su residencia (sin contarlo a usted): </label>
+            <input type="number" name="familia" placeholder="3" required>
+            <br>
+
+            <label for="size">Usted puede considerar que el tamaño de su hogar seria: </label>
+            <select id="size" name="size" form="adopt_animals">
+                <option value="Pequeña">Pequeña</option>
+                <option value="Mediana">Mediana</option>
+                <option value="Grande">Grande</option>
+            </select>
+            <br>
+
+            <label>Explique las razones de porque desea adoptar: </label>
+            <br>
+            <input type="text" name="razon" placeholder="Desde hace muchos años quiero tener una para que me haga compañia" required
+                   size="50" style="height: 200px">
+            <br>
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+        <br>
+        <br>
+        <br>
+        <a href="index.html">
+            <input type="button" value="Volver">
+        </a>
+    </div>
 </body>
 </html>
