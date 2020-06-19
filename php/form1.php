@@ -1,6 +1,6 @@
 <?php
     #Contectarse al servidor
-    $conectar = new mysqli('localhost', 'root', '', 'formulario_1');
+    $conectar = new mysqli('localhost', 'root', '', 'happy_animals');
     $conectar->set_charset("utf8");
     if($conectar->connect_error){
         echo "No se pudo conectar con el server";
