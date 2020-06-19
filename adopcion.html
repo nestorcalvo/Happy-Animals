@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h2>Datos personales</h2>
+    <div class="form">
+        <form action="php/form1.php" method="post" id="animals">
+            <br>
+            <label>Nombre: </label>
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <br>
+
+            <label>Correo: </label>
+            <input type="email" name="correo" placeholder="ejemplo@correo.com" required>
+            <br>
+
+            <label>Numero de celular: </label>
+            <input type="number" name="celular" placeholder="3000000001" required>
+            <br>
+
+            <label>Cuanto tiempo lleva con la mascota (tiempo en dias): </label>
+            <input type="number" name="tiempo" placeholder="20" required>
+            <br>
+
+            <label>Explique las razones de porque desea dar en adopcion a la mascota: </label>
+            <br>
+            <input type="text" name="razon" placeholder="Siento que no tengo espacio para mantenerla..." required
+                   size="50" style="height: 200px">
+            <br>
+            <br>
+            <br>
+
+            <h2>Datos del animal</h2>
+            <label>Nombre del animal: </label>
+            <input type="text" name="nombre_A" placeholder="Nombre" required>
+            <br>
+
+            <label for="especie">Especie: </label>
+            <select id="especie" name="animals_list" form="animals">
+                <option value="Perro">Perro</option>
+                <option value="Gato">Gato</option>
+                <option value="Conejo">Conejo</option>
+            </select>
+            <br>
+
+            <label>Fecha de nacimiento del animal: </label>
+            <input type="date" name="fecha_nacimiento" placeholder="dd/mm/aa" required>
+            <br>
+
+            <label for="sex">Sexo: </label>
+            <select id="sex" name="animals_sex" form="animals" required>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+            </select>
+            <br>
+
+            <label for="tamaño">Tamaño: </label>
+            <select id="tamaño" name="tamaño_animal" form="animals" required>
+                <option value="Pequeño">Pequeño</option>
+                <option value="Mediano">Mediano</option>
+                <option value="Grande">Grande</option>
+            </select>
+            <br>
+
+            <label>Peso (en kg):</label>
+            <input type="number" name="peso" placeholder="3" required>
+            <br>
+            <br>
+            <br>
+            <h2>Estado del animal</h2>
+
+            <input type="checkbox" name="vacunado" id="vacunado">
+            <label for="vacunado"> Vacunado</label><br>
+
+            <input type="checkbox" name="desparacitado" id="desparacitado" >
+            <label for="desparacitado"> Desparacitado</label><br>
+
+            <input type="checkbox" name="sano" id="sano">
+            <label for="sano"> Sano</label><br>
+
+            <input type="checkbox" name="microchip" id="microchip">
+            <label for="microchip"> Microchip</label><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>
