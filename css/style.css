@@ -126,7 +126,7 @@ button.bg1{
     }
 
     button.bg1{
-        top:110%;
+        top:90%;
         left: 2vw;
         color: white;
         font-family: Bahnschrift;
@@ -223,6 +223,125 @@ img.bg1{
     position: relative;
 }
 
+.card{
+    width: 80vw;
+    top:-50px;
+    border: none;
+    outline: none; 
+}
 
+.card-img-top{
+    width: 342px;
+    height: 240px;
+}
 
+.card1{
+    margin-left: 8.2vw;
+}
 
+.card2{
+    margin-left: 5vw;
+}
+
+.card3{
+    margin-left: 1.9vw;
+}
+
+.card-title{
+    text-align: center;
+    color: #726a95;
+    font-family: Bahnschrift;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 3px;
+    float: center;
+}
+
+.card-btn {
+    border-radius: 30px 30px 30px 30px;
+    background-color: #89d3e2;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    font-family: Bahnschrift;
+    padding: 3px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  .card-btn:hover{
+    background-color: #89d3e2;
+    font-size: 20px;
+    filter: drop-shadow(3px 5px 5px rgba(0, 0, 0, 0));
+  }
+  
+  .card-btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .card-btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .card-btn:hover span {
+    padding-right: 25px;
+  }
+  
+  .card-btn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.card-text{
+    color:#6C6463;
+    font-family: Tahoma;
+    font-size: 15px;
+}
+
+#btn1{
+    margin-top: 7.9%;
+}
+
+#btn3{
+    margin-top: 15.9%;
+}
+
+#link1{
+    text-decoration: none;
+    color: white;
+    outline: none;
+}
+
+@media only screen and (max-width: 500px) {
+
+    #btn1{
+        margin-top: 4%;
+    }
+
+    #btn2{
+        margin-top: 4%;
+    }
+
+    #btn3{
+        margin-top: 4%;
+    }
+
+    .card-img-top{
+        width: 357px;
+    }
+
+    .card{
+        margin-left: 12vw;
+        top: 60px;
+    }
+}
