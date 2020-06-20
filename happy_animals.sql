@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-06-2020 a las 23:57:53
+-- Tiempo de generación: 20-06-2020 a las 21:46:40
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.6
 
@@ -49,6 +49,7 @@ INSERT INTO `administradores` (`id`, `usuarioadmin`, `correo`, `clave`) VALUES
 --
 
 CREATE TABLE `adoptar` (
+  `id` int(11) NOT NULL,
   `nombre` text NOT NULL,
   `correo` text NOT NULL,
   `tel` int(11) NOT NULL,
@@ -56,16 +57,18 @@ CREATE TABLE `adoptar` (
   `tiempo_casa` tinyint(24) UNSIGNED NOT NULL,
   `familiares` int(11) NOT NULL,
   `tamano_casa` text NOT NULL,
-  `razon` text NOT NULL
+  `razon` text NOT NULL,
+  `revisado` varchar(255) NOT NULL DEFAULT 'no'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `adoptar`
 --
 
-INSERT INTO `adoptar` (`nombre`, `correo`, `tel`, `ingresos`, `tiempo_casa`, `familiares`, `tamano_casa`, `razon`) VALUES
-('Benjamin', 'benja@gmail.com', 2147483647, 2000, 20, 2, 'Grande', 'Siempre quise uno'),
-('Benjamin', 'benja@gmail.com', 4412, 30, 24, 1, 'Grande', 'Siempre quise uno');
+INSERT INTO `adoptar` (`id`, `nombre`, `correo`, `tel`, `ingresos`, `tiempo_casa`, `familiares`, `tamano_casa`, `razon`, `revisado`) VALUES
+(1, 'Benjamin', 'benja@gmail.com', 2147483647, 2000, 20, 2, 'Grande', 'Siempre quise uno', 'no'),
+(2, 'Benjamin', 'benja@gmail.com', 4412, 30, 24, 1, 'Grande', 'Siempre quise uno', 'no'),
+(3, 'Hola', 'hola@gmail.com', 123231, 21, 12, 2, 'Grande', 'Quiero uno', 'no');
 
 -- --------------------------------------------------------
 
@@ -74,6 +77,7 @@ INSERT INTO `adoptar` (`nombre`, `correo`, `tel`, `ingresos`, `tiempo_casa`, `fa
 --
 
 CREATE TABLE `dar_adopcion` (
+  `id` int(11) NOT NULL,
   `nombre` text NOT NULL,
   `correo` text NOT NULL,
   `tel` int(11) NOT NULL,
@@ -88,17 +92,19 @@ CREATE TABLE `dar_adopcion` (
   `vacunado` text NOT NULL,
   `desparacitado` text NOT NULL,
   `sano` text NOT NULL,
-  `microchip` text NOT NULL
+  `microchip` text NOT NULL,
+  `revisado` varchar(255) NOT NULL DEFAULT 'no'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `dar_adopcion`
 --
 
-INSERT INTO `dar_adopcion` (`nombre`, `correo`, `tel`, `tiempo`, `razón`, `nombre_animal`, `especie`, `nacimiento_animal`, `sexo`, `tamaño`, `peso`, `vacunado`, `desparacitado`, `sano`, `microchip`) VALUES
-('', '', 0, 0, '', '', '', '0000-00-00', '', '', 0, 'no', 'no', 'no', 'no'),
-('Nestor', 'nestorcalvoa@gmail.com', 12, 1, 'pa', 'SA', 'Perro', '2020-06-15', 'Masculino', 'Pequeño', 2, 'si', 'no', 'si', 'no'),
-('Hola', 'hola@gmail.co', 215452, 2, 'Porque si', 'Perrito', 'Gato', '2020-06-24', 'Femenino', 'Mediano', 20, 'si', 'si', 'si', 'si');
+INSERT INTO `dar_adopcion` (`id`, `nombre`, `correo`, `tel`, `tiempo`, `razón`, `nombre_animal`, `especie`, `nacimiento_animal`, `sexo`, `tamaño`, `peso`, `vacunado`, `desparacitado`, `sano`, `microchip`, `revisado`) VALUES
+(1, 'Nestor', 'nestorcalvoa@gmail.com', 12, 1, 'pa', 'SA', 'Perro', '2020-06-15', 'Masculino', 'Pequeño', 2, 'si', 'no', 'si', 'no', 'no'),
+(2, 'Hola', 'hola@gmail.co', 215452, 2, 'Porque si', 'Perrito', 'Gato', '2020-06-24', 'Femenino', 'Mediano', 20, 'si', 'si', 'si', 'si', 'no'),
+(3, 'Hola', 'hola@gmail.com', 123123, 2, 'pa', 'Gatito', 'Gato', '2020-06-09', 'Femenino', 'Mediano', 21, 'si', 'si', 'si', 'si', 'no'),
+(4, 'Caja', 'caja@gmail.com', 25215, 12, 'Ya no lo quiero', 'Gatito', 'Conejo', '2020-06-02', 'Femenino', 'Grande', 233, 'no', 'no', 'no', 'no', 'no');
 
 -- --------------------------------------------------------
 
@@ -148,6 +154,18 @@ ALTER TABLE `administradores`
   ADD UNIQUE KEY `indiceadm` (`usuarioadmin`) USING HASH;
 
 --
+-- Indices de la tabla `adoptar`
+--
+ALTER TABLE `adoptar`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `dar_adopcion`
+--
+ALTER TABLE `dar_adopcion`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
@@ -163,6 +181,18 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `administradores`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `adoptar`
+--
+ALTER TABLE `adoptar`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `dar_adopcion`
+--
+ALTER TABLE `dar_adopcion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

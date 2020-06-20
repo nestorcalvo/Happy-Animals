@@ -43,7 +43,7 @@
     }
 
     #sentencia
-    $sql = "INSERT INTO dar_adopcion VALUES('$nombre',
+    $sql = "INSERT INTO dar_adopcion(nombre,correo,tel,tiempo,razón,nombre_animal,especie,nacimiento_animal,sexo,tamaño,peso,vacunado,desparacitado,sano,microchip) VALUES('$nombre',
                                         '$correo',
                                         '$tel',
                                         '$tiempo',

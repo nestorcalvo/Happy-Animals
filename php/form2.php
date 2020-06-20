@@ -15,7 +15,7 @@
     $razon = $_POST['razon'];
 
     #sentencia
-    $sql = "INSERT INTO adoptar VALUES('$nombre',
+    $sql = "INSERT INTO adoptar(nombre,correo,tel,ingresos,tiempo_casa,familiares,tamano_casa,razon) VALUES('$nombre',
                                             '$correo',
                                             '$tel',
                                             '$ingresos',
