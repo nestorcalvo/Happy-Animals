@@ -1,7 +1,7 @@
 <?php
 function conexionSQL(){
 
-    $link = new mysqli("localhost","root","","login");
+    $link = new mysqli("localhost","root","","happy_animals");
     if($link->connect_error){
         $error="Error de conexion:".$link->connect_error."Mensaje: ".$link->connect_error;
         die($error);
