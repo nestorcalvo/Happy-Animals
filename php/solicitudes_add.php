@@ -12,6 +12,27 @@
         <li><a href="adopcion_acept.php">Solicitudes adopción</a></li>
         <li style="float:right"><a href="../index.html" id="close_sesion">Cerrar sesion</a></li>
     </ul>
+    <br>
+    <table border = '2'>
+        <tr>
+            <th>Aceptar</th>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Telefono</th>
+            <th>Tiempo</th>
+            <th>Razón</th>
+            <th>Nombre del animal</th>
+            <th>Especie</th>
+            <th>Nacimiento del animal</th>
+            <th>Sexo</th>
+            <th>Tamaño</th>
+            <th>Peso</th>
+            <th>Vacunado</th>
+            <th>Desparacitado</th>
+            <th>Sano</th>
+            <th>Microchip</th>
+        </tr>
     <?php
         #Open database and extract values
         #Contectarse al servidor
@@ -35,79 +56,35 @@
         <?php
                 while($rows = mysqli_fetch_array($ejecutar)){
                     echo "<form method='post' name='check_solicitudes' id = 'check_solicitudes' action='check.php'>";
-        ?>
+
+
+
+                    echo "<tr>";
+                    echo "<td>";
+                    ?>
                     <input type='checkbox' id =<?php echo $rows['id'] ?>  name=<?php echo $rows['id'] ?>>
-
         <?php
-                    echo $rows['id'];
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo $rows['nombre'];
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo $rows['correo'];
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo $rows['tel'];
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo $rows['tiempo'];
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo $rows['razón'];
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo $rows['nombre_animal'];
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo $rows['especie'];
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo $rows['nacimiento_animal'];
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo $rows['sexo'];
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo $rows['tamaño'];
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo $rows['peso'];
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo $rows['vacunado'];
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo $rows['desparacitado'];
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo $rows['sano'];
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo $rows['microchip'];
-                    echo "&nbsp";
-                    echo "&nbsp";
-                    echo "&nbsp";
-
-                    echo "<br>";
-                    echo "<br>";
+                    echo "</td>";
+                    echo "<td>" .  $rows['id'] . "</td>" ;
+                    echo "<td>" .  $rows['nombre'] . "</td>" ;
+                    echo "<td>" .  $rows['correo'] . "</td>" ;
+                    echo "<td>" .  $rows['tel'] . "</td>" ;
+                    echo "<td>" .  $rows['tiempo'] . "</td>" ;
+                    echo "<td>" .  $rows['razón'] . "</td>" ;
+                    echo "<td>" .  $rows['nombre_animal'] . "</td>" ;
+                    echo "<td>" .  $rows['especie'] . "</td>" ;
+                    echo "<td>" .  $rows['nacimiento_animal'] . "</td>" ;
+                    echo "<td>" .  $rows['sexo'] . "</td>" ;
+                    echo "<td>" .  $rows['tamaño'] . "</td>" ;
+                    echo "<td>" .  $rows['peso'] . "</td>" ;
+                    echo "<td>" .  $rows['vacunado'] . "</td>" ;
+                    echo "<td>" .  $rows['desparacitado'] . "</td>" ;
+                    echo "<td>" .  $rows['sano'] . "</td>" ;
+                    echo "<td>" .  $rows['microchip'] . "</td>" ;
+                    echo "</tr>";
                 }
         ?>
+    </table>
                 <br>
                 <input type="submit" value="Enviar">
         <?php
