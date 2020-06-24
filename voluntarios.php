@@ -15,6 +15,10 @@ session_start();
 		 if(isset($_GET['error']) && $_GET['error']==true ){
             print("<h4>Error: Verifica tus datos y conexion a internet. </h4>");
             }
+        if(isset($_GET['error2']) && $_GET['error2']==true ){
+                print("<h4>Sus datos han sido ingresados con exito, muy pronto nos comunicaremos con usted. </h4>");
+            }
+       
         ?>
             <br>
             <label>Nombres: </label>
@@ -43,8 +47,9 @@ session_start();
             <br>
             
             <br>
-            <input type="submit" value="Enviar">
+            <input type="submit" value="Enviar"><br><br>
         </form>
+        
 
 </body>
 </html>

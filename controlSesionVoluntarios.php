@@ -29,13 +29,13 @@ function infovoluntarios(){
     $insertar = $mysql->query($qv);
     print($insertar);
 
-    if(!$insertar){
+    if($insertar){
+        header("Location:voluntarios.php?error2=true?");
+        session_destroy();
         
+    }else{
         header("Location:voluntarios.php?error=true?");
 
-    }else{
-        header("Location:sgtapaginiciosesion.php");
-        session_destroy();
     }
 
 
