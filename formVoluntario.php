@@ -113,49 +113,49 @@ session_start();
             }
         ?>
             <br>
-            
+        
             <div class="form-group row">
-            <label class="col-sm-2 col-form-label text-right ml-5" for="nombre">Nombres: </label>
-            <input type="text" class="form-control col-sm-6  " id="nombre"   name="nombres" placeholder="Nombres" value="<?php if (isset($_SESSION['nombres'])){ echo $_SESSION['nombres']; } ?>" required>
+            <label class="col-5 col-sm-3 col-md-2 col-form-label text-right ml-5" for="nombre">Nombres: </label>
+            <input type="text" class="form-control col-5 col-sm-5 col-md-6 col-lg-7  " id="nombre"   name="nombres" placeholder="Nombres" value="<?php if (isset($_SESSION['nombres'])){ echo $_SESSION['nombres']; } ?>" required>
             </div>
 
             <div class="form-group row">
-            <label class="col-sm-2 col-form-label text-right ml-5" for="apellido" >Apellidos: </label>
-            <input type="text" class="form-control col-sm-6 " id="apellido"  name="apellidos" placeholder="Apellidos" value="<?php if (isset($_SESSION['apellidos'])){ echo $_SESSION['apellidos']; } ?>" required>
+            <label class="col-5 col-sm-3 col-md-2 col-form-label text-right ml-5" for="apellido" >Apellidos: </label>
+            <input type="text" class="form-control col-5 col-sm-5 col-md-6 col-lg-7" id="apellido"  name="apellidos" placeholder="Apellidos" value="<?php if (isset($_SESSION['apellidos'])){ echo $_SESSION['apellidos']; } ?>" required>
             </div>
 
             <div class="form-group row">
-            <label class="col-sm-2 col-form-label text-right ml-5" for="fecha" >Fecha de nacimiento: </label>
-            <input type="date" class="form-control col-sm-6 "  id="fecha" name="fecha" value="<?php if (isset($_SESSION['fecha'])){ echo $_SESSION['fecha']; } ?>" required>
+            <label class="col-5 col-sm-3 col-md-2 col-form-label text-right ml-5" for="fecha" >Fecha de nacimiento: </label>
+            <input type="date" class="form-control col-5 col-sm-5 col-md-6 col-lg-7"  id="fecha" name="fecha" value="<?php if (isset($_SESSION['fecha'])){ echo $_SESSION['fecha']; } ?>" required>
            
             </div>
 
             <div class="form-group row ">
-            <label class="col-sm-2 col-form-label text-right ml-5" for="correo">Correo electrónico: </label>
-            <input type="email" class="form-control col-sm-6 "  id="correo" name="correo" placeholder="ejemplo@correo.com" value="<?php if (isset($_SESSION['correo'])){ echo $_SESSION['correo']; } ?>" required>
+            <label class="col-5 col-sm-3 col-md-2 col-form-label text-right ml-5" for="correo">Correo electrónico: </label>
+            <input type="email" class="form-control col-5 col-sm-5 col-md-6 col-lg-7"  id="correo" name="correo" placeholder="ejemplo@correo.com" value="<?php if (isset($_SESSION['correo'])){ echo $_SESSION['correo']; } ?>" required>
             
             </div>
 
             <div class="form-group row">
-            <label class="col-sm-2 col-form-label text-right ml-5" for="celular" >Numero de celular: </label>
-            <input type="number" class="form-control col-sm-6 "  id="celular" name="celular" placeholder="3000000001" value="<?php if (isset($_SESSION['celular'])){ echo $_SESSION['celular']; } ?>" required>
+            <label class="col-5 col-sm-3 col-md-2 col-form-label text-right ml-5" for="celular" >Numero de celular: </label>
+            <input type="number" class="form-control col-5 col-sm-5 col-md-6 col-lg-7"  id="celular" name="celular" placeholder="3000000001" value="<?php if (isset($_SESSION['celular'])){ echo $_SESSION['celular']; } ?>" required>
             
             </div>
 
             <div class="form-group row">
-            <label class="col-sm-2 col-form-label text-right ml-5" for="fijo">Telefono fijo: </label>
-            <input type="number" class="form-control col-sm-6"  id="fijo" name="telefono" placeholder="2000001" value="<?php if (isset($_SESSION['telefono'])){ echo $_SESSION['telefono']; } ?>" >
+            <label class="col-5 col-sm-3 col-md-2 col-form-label text-right ml-5" for="fijo">Telefono fijo: </label>
+            <input type="number" class="form-control col-5 col-sm-5 col-md-6 col-lg-7"  id="fijo" name="telefono" placeholder="2000001" value="<?php if (isset($_SESSION['telefono'])){ echo $_SESSION['telefono']; } ?>" >
         
             </div>
 
             <div class="form-group row">
-            <label class="col-sm-2 col-form-label text-right ml-5" for="direccion" >Direccion: </label>
-            <input type="text" class="form-control col-sm-6 " id="direccion"  name="direccion" placeholder="Barrio Cl 00 Cr 00 # 00-00" value="<?php if (isset($_SESSION['direccion'])){ echo $_SESSION['direccion']; } ?>" required>
+            <label class="col-5 col-sm-3 col-md-2 col-form-label text-right ml-5" for="direccion" >Direccion: </label>
+            <input type="text" class="form-control col-5 col-sm-5 col-md-6 col-lg-7" id="direccion"  name="direccion" placeholder="Barrio Cl 00 Cr 00 # 00-00" value="<?php if (isset($_SESSION['direccion'])){ echo $_SESSION['direccion']; } ?>" required>
             </div>
 
             <div class="form-group row">
-            <label class="col-sm-2 col-form-label text-right ml-5" for="ocupacion">Ocupación: </label>
-            <input type="text" class="form-control col-sm-6" id="ocupacion" name="ocupacion" placeholder="Ejemplo: Estudiante" value="<?php if (isset($_SESSION['ocupacion'])){ echo $_SESSION['ocupacion']; } ?>" required>
+            <label class="col-5 col-sm-3 col-md-2 col-form-label text-right ml-5" for="ocupacion">Ocupación: </label>
+            <input type="text" class="form-control col-5 col-sm-5 col-md-6 col-lg-7" id="ocupacion" name="ocupacion" placeholder="Ejemplo: Estudiante" value="<?php if (isset($_SESSION['ocupacion'])){ echo $_SESSION['ocupacion']; } ?>" required>
             </div>
             
             <br>
