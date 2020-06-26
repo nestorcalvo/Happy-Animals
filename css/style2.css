@@ -392,6 +392,10 @@ p.second-menu{
     text-align: center;
 }
 
+a.second-menu{
+    text-decoration: none;
+}
+
 div.second-menu{
     background-image: linear-gradient(0deg, #89d3e2 25%, #7bbaba 25%, #7bbaba 50%, #89d3e2 50%, #89d3e2 75%, #7bbaba 75%, #7bbaba 100%);
     background-size: 80.00px 80.00px;
@@ -426,7 +430,7 @@ p.position{
     font-family: helvetica;
     font-size: 15px;
     font-weight: bold;
-    color: #5a4f88;
+    color: white;
 }
 
 img.position{
