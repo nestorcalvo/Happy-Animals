@@ -163,7 +163,8 @@ button:active{
 }
 
 .filter{
-    margin-top: 10px;
+    margin-top: 3%;
+    margin-bottom: 3%;
     display: flex;
     justify-content: center;
 }
@@ -216,7 +217,7 @@ a.filter{
     font-family: Tahoma;
     font-size: 17px;
     color:#646060;
-    margin-top: 42%;
+    margin-top: 30%;
 }
 
 button.filter{
@@ -230,7 +231,7 @@ button.filter{
     color: #FFFFFF;
     font-weight: bold;
     padding-top: 8px;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 .card-a{
@@ -252,7 +253,6 @@ button.filter{
 .card-title:hover {
     box-shadow: inset 400px 0 0 0 #726a95;
 }
-
   
 .card-title {
     width: 100%;
@@ -269,10 +269,186 @@ button.filter{
     transition: ease-out 0.4s;
 }
 
+.adp-me{
+    background-color: white;
+    color: white;
+}
+
+.adp-me:hover{
+    background-color: #89d3e2;
+}
+
+#img-adp{
+    bottom: -10px;
+}
+
+#img-adp{
+    bottom: 0;
+}
+
+
+.card-text{
+    text-align: center;
+    font-family: tahoma;
+    font-size: 16px;
+}
+
+.gender{
+    text-align: center;
+    color: #646060;
+    font-family: tahoma;
+    font-size: 16px;
+}
+
+.age{
+    text-align: center;
+    color: #646060;
+    font-family: tahoma;
+    font-size: 16px;
+}
+
+.code{
+    text-align: center;
+    color: #646060;
+    font-size: 12px;
+}
+
+.hover-animation{
+    width: 100%;
+    height: 210px;
+    margin-bottom: 0;
+    display: inline-block;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.one{background-image: url(../img/adp8.jpg);}
+.two{background-image: url(../img/adp6.jpg);}
+.three{background-image: url(../img/adp3.jpg);}
+.four{background-image: url(../img/adp7.jpg);}
+.five{background-image: url(../img/adp4.jpg);}
+.six{background-image: url(../img/adp2.jpg);}
+.seven{background-image: url(../img/adp1.jpg);}
+.eight{background-image: url(../img/adp9.jpg);}
+.nine{background-image: url(../img/adp5.jpg);}
+
+.hover-animation:before,
+.hover-animation:after{
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    content: '';
+    position: absolute;
+    background: inherit;
+    transition: 0.3s;
+}
+
+.hover-animation:after{
+    padding: 65px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-family: "Lucida Console", Monaco, monospace;
+    background: #726a95;
+    transform: translateY(100%);
+    content: attr(data-text);
+}
+
+.hover-animation:hover:before{
+    transform: translate(-50%);
+}
+
+.hover-animation:hover:after{
+    transform: translate(0);
+}
+
+img.second-menu{
+    display: block;
+    margin: auto;
+    margin-top: 3%;
+    width: 50px;
+    height: 50px;
+}
+
+h3.second-menu{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+}
+
+p.second-menu{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+div.second-menu{
+    background-image: linear-gradient(0deg, #89d3e2 25%, #7bbaba 25%, #7bbaba 50%, #89d3e2 50%, #89d3e2 75%, #7bbaba 75%, #7bbaba 100%);
+    background-size: 80.00px 80.00px;
+    margin: 0;
+    padding: 10px;
+}
+
+.second-menu-h{
+    width: 90%;
+    height: 90%;
+    padding: 1%;
+    float: center;
+    margin-top: 2.5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    transition: 0.3s linear;
+}
+
+.second-menu-h:hover{
+    transform: scale(1.1);
+    background-color: #42AEC2;
+}
+
+div.position{
+    background-color: #a89bc0;
+    height: 200px;
+}
+
+p.position{
+    text-align: center;
+    padding-top: 3%;
+    font-family: helvetica;
+    font-size: 15px;
+    font-weight: bold;
+    color: #5a4f88;
+}
+
+img.position{
+    display: block;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+}
+
+h3.position{
+    text-align: center;
+    font-size: 40px;
+    font-family: Merriweather;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
 footer{
    background-color: #393e46;
    width: 100vw;
-   margin-top: 3%;
+   padding-top: 50px;
+   padding-bottom: 50px;
 }
 
 .img-footer{
@@ -360,7 +536,7 @@ td.table1{
     font-family: Bahnschrift;
     color: rgba(220, 224, 226, 1);
     border: none;
-    border-bottom: 1px solid rgba(220, 224, 226, 1);;
+    border-bottom: 1px solid rgba(220, 224, 226, 1);
 }
 
 h6.cu{
