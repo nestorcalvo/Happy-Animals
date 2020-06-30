@@ -159,10 +159,13 @@ session_start();
             </div>
             
             <br>
-            <input  type="submit" class="card-btn2 "  value="Enviar">
+            <input  type="submit" class="card-btn2 "  value="Enviar"><br>
+            <a href="index.html" class="mx-5">Volver</a>
+            
         </form>
-        </div>
         
+        </div>
+       
         
 
 </body>
