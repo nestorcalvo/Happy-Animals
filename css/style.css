@@ -1,6 +1,8 @@
+
 *{
     /*border: 1px solid;*/
 }
+
 
 .nav-item{
     list-style: none;
@@ -257,11 +259,12 @@ img.bg1{
     float: center;
 }
 
-.card-btn {
+
+.card-btn2 {
     border-radius: 30px 30px 30px 30px;
     background-color: #89d3e2;
     border: none;
-    color: #FFFFFF;
+    color:#000000;
     text-align: center;
     font-size: 20px;
     font-family: Bahnschrift;
@@ -269,6 +272,23 @@ img.bg1{
     width: 200px;
     transition: all 0.5s;
     cursor: pointer;
+    margin-left: 40%;
+}
+
+.card-btn {
+    border-radius: 30px 30px 30px 30px;
+    background-color: #89d3e2;
+    border: none;
+    color: #FFFFFF;
+
+    text-align: center;
+    font-size: 20px;
+    font-family: Bahnschrift;
+    padding: 3px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+
   }
 
   .card-btn:hover{
@@ -344,6 +364,12 @@ img.bg1{
         margin-left: 12vw;
         top: 60px;
     }
+
+
+    .linkv{
+        
+        margin-left: 80%;
+    }
 }
 
 .card4{
@@ -354,7 +380,7 @@ img.bg1{
 .card5{
     top: 20px;
     border-top: 5px solid #726a95;
-    
+
 }
 
 #form-button1{
@@ -534,4 +560,5 @@ ul.cu{
 li.cu{
     font-family: Bahnschrift;
     color: rgba(220, 224, 226, 1);
+
 }
