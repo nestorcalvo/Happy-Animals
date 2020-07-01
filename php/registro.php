@@ -10,7 +10,7 @@ session_start();
 <body>
 	<h1>Nueva cuenta</h1>
 
-	<form method="POST" action="ControlSesionRegistro.php">
+	<form method="POST" action="../php/controlSesionRegistro.php">
 		<?php
 		 if(isset($_GET['error']) && $_GET['error']==true ){
             print("<h4>Error: El nombre de usuario ya existe </h4>");

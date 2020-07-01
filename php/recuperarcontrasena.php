@@ -75,7 +75,7 @@ if(isset($_POST['recuperar'])){
 
 		<input type="text" name="correo" placeholder="Email" required><br><br>
         <input type="submit" name="recuperar" value="Recuperar"><br><br>
-        <a href="login.php">Iniciar Sesión</a>
+        <a href="../php/login.php">Iniciar Sesión</a>
 
 	</form>
 

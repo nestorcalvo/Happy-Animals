@@ -10,7 +10,7 @@ session_start();
 <body>
 <h2>Formulario de inscripción a voluntario</h2>
     <div class="form">
-        <form action="controlSesionVoluntarios.php" method="post" id="adopt_animals">
+        <form action="../php/controlSesionVoluntarios.php" method="post" id="adopt_animals">
         <?php
 		 if(isset($_GET['error']) && $_GET['error']==true ){
             print("<h4>Error: Verifica tus datos y conexion a internet. </h4>");

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once"./conexionBDL.php";
+require_once"../php/conexionBDL.php";
 
 infovoluntarios();
 function infovoluntarios(){
