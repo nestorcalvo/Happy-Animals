@@ -1,0 +1,568 @@
+*{
+    /*border: 1px solid;*/
+}
+
+.nav-item{
+    list-style: none;
+    margin: 0 5.2vw;
+    font-size: 2.2vh;
+    padding: 2px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: white;
+    font-family: Bahnschrift;
+}
+
+nav{
+    width: 100vw;
+    background-color:#393e46;
+}
+
+.nav-list{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link:hover{
+    color: white;
+    content: "";
+    border-bottom: 3px solid #89d3e2;
+}
+
+#nav-button{
+    display: none;
+}
+
+img.logo{
+    width: 100%;
+    max-height: 100%;
+}
+
+.nav-title{
+    text-align: center;
+    font-family: Bahnschrift;
+    font-size: 25px;
+    padding: 2px;
+    margin-top: 4%;
+}
+
+
+@media only screen and (max-width: 500px) {
+
+    .nav-title{
+        text-align: left;
+    }
+
+    ul.nav-list{
+      flex-direction: column;
+    }
+    
+    li.nav-item{
+      margin: 0;
+    }
+
+    a.nav-link{
+      display: block;
+    }
+
+    #nav-button{
+        display: block;
+        padding: 1.5vw;
+        font-size: 3vh;
+        background-color: #89d3e2;
+        border: none;
+        outline: none;        
+        cursor: pointer;
+        align-self: flex-start;
+      }
+  }
+
+.icon{
+    width: 32px;
+    height: 32px;
+}
+
+.d-block1{
+    margin: 0px;
+    text-align: center;
+    text-decoration: none;
+    color: seashell;
+    font-size: 15px;
+    font-family: Corbel;
+    padding: 5px;
+    background-color: #393e46;
+}
+
+.multi-button button{
+    height: 50px;
+    width: 130px;
+    background: #89d3e2;
+    font-size: 1.2rem;
+    border: none;
+    margin: -5px; 
+    padding: 0;
+    outline: none;
+}
+.multi-button :nth-child(1){
+    border-radius: 0 0 0 0;
+}
+
+.multi-button :nth-child(3){
+    border-radius: 0 3px 30px 0;
+}
+
+button:hover{
+    cursor: pointer;
+    filter: drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.45));
+    background: #726a95;
+    font-size: 1.4rem;
+}
+  
+button:active{
+    filter: none;
+    transform: scale(.95);
+}
+
+.form-title{
+    font-family: Bahnschrift;
+    font-size: 2vh;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+#form-button{
+    background-color: #89d3e2;
+    font-family: Bahnschrift;
+    color: black;
+    font-size: 2vh;
+}
+
+.label-title{
+    font-family: Bahnschrift;
+    font-size: 2.3vh;
+}
+
+.modal-title{
+    font-family: Bahnschrift;
+    font-size: 3vh;
+}
+
+.logo1{
+    display: block;
+    margin: auto;
+    width: 15%;
+    height: 15%;
+}
+
+#carousel{
+    width: 100vw;
+}
+
+.filter{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+option{
+    font-family: tahoma;
+}
+
+p.filter{
+    font-family: Tahoma;
+    color: #646060;
+    font-size: 17px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+select.filter{
+    text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .5em;
+}
+
+ul.filter{
+    display: flex;
+    background-color: #F0F3F4;
+    border: 1px solid #F5F0EF;
+    padding: 3%;
+}
+
+li.dropdown{
+    list-style: none;
+    margin: 0 0.8vw;
+    font-size: 2.2vh;
+}
+
+.icon{
+    width: 28px;
+    height: 28px;
+}
+
+a.filter{
+    text-decoration: none;
+    font-family: Tahoma;
+    font-size: 17px;
+    color:#646060;
+    margin-top: 30%;
+}
+
+button.filter{
+    border-radius: 30px 30px 30px 30px;
+    border: none;
+    width: 220px;
+    height: 40px;
+    background-color: #89d3e2;
+    font-family: tahoma;
+    font-size: 15px;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding-top: 8px;
+    margin-top: 3%;
+}
+
+.card-a{
+    border: none;
+    outline: none; 
+    margin-left: 12%;
+}
+
+.card-body{
+    margin-bottom: 5%;
+    padding: 0;
+}
+
+#adp-title{
+    text-align: center;
+    background-color: #b5aed4;
+}
+
+.card-title:hover {
+    box-shadow: inset 400px 0 0 0 #726a95;
+}
+  
+.card-title {
+    width: 100%;
+    color: #FFF;
+    padding: 18px 36px;
+    display: inline-block;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #726a95;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+.adp-me{
+    background-color: white;
+    color: white;
+}
+
+.adp-me:hover{
+    background-color: #89d3e2;
+}
+
+#img-adp{
+    bottom: -10px;
+}
+
+#img-adp{
+    bottom: 0;
+}
+
+
+.card-text{
+    text-align: center;
+    font-family: tahoma;
+    font-size: 16px;
+}
+
+.gender{
+    text-align: center;
+    color: #646060;
+    font-family: tahoma;
+    font-size: 16px;
+}
+
+.age{
+    text-align: center;
+    color: #646060;
+    font-family: tahoma;
+    font-size: 16px;
+}
+
+.code{
+    text-align: center;
+    color: #646060;
+    font-size: 12px;
+}
+
+.hover-animation{
+    width: 100%;
+    height: 210px;
+    margin-bottom: 0;
+    display: inline-block;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.one{background-image: url(../img/adp8.jpg);}
+.two{background-image: url(../img/adp6.jpg);}
+.three{background-image: url(../img/adp3.jpg);}
+.four{background-image: url(../img/adp7.jpg);}
+.five{background-image: url(../img/adp4.jpg);}
+.six{background-image: url(../img/adp2.jpg);}
+.seven{background-image: url(../img/adp1.jpg);}
+.eight{background-image: url(../img/adp9.jpg);}
+.nine{background-image: url(../img/adp5.jpg);}
+
+.hover-animation:before,
+.hover-animation:after{
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    content: '';
+    position: absolute;
+    background: inherit;
+    transition: 0.3s;
+}
+
+.hover-animation:after{
+    padding: 65px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-family: "Lucida Console", Monaco, monospace;
+    background: #726a95;
+    transform: translateY(100%);
+    content: attr(data-text);
+}
+
+.hover-animation:hover:before{
+    transform: translate(-50%);
+}
+
+.hover-animation:hover:after{
+    transform: translate(0);
+}
+
+img.second-menu{
+    display: block;
+    margin: auto;
+    margin-top: 3%;
+    width: 50px;
+    height: 50px;
+}
+
+h3.second-menu{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+}
+
+p.second-menu{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+a.second-menu{
+    text-decoration: none;
+}
+
+div.second-menu{
+    background-image: linear-gradient(0deg, #89d3e2 25%, #7bbaba 25%, #7bbaba 50%, #89d3e2 50%, #89d3e2 75%, #7bbaba 75%, #7bbaba 100%);
+    background-size: 80.00px 80.00px;
+    margin: 0;
+    padding: 10px;
+}
+
+.second-menu-h{
+    width: 90%;
+    height: 90%;
+    padding: 1%;
+    float: center;
+    margin-top: 2.5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    transition: 0.3s linear;
+}
+
+.second-menu-h:hover{
+    transform: scale(1.1);
+    background-color: #42AEC2;
+}
+
+div.position{
+    background-color: #a89bc0;
+    height: 200px;
+}
+
+p.position{
+    text-align: center;
+    padding-top: 3%;
+    font-family: helvetica;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+img.position{
+    display: block;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+}
+
+h3.position{
+    text-align: center;
+    font-size: 40px;
+    font-family: Merriweather;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+footer{
+   background-color: #393e46;
+   width: 100vw;
+   padding-top: 50px;
+   padding-bottom: 50px;
+}
+
+.img-footer{
+    width: 20%;
+    margin: 2%;
+
+}
+
+.cright{
+    width: 100vw;
+    background-color: #726a95;
+}
+
+h3.cright{
+    text-align: center;
+    color: #b5aed4;
+    font-size: 12px;
+    font-family: Bahnschrift;
+    padding: 4px;
+}
+
+.icon-footer{
+    width: 20px;
+}
+
+.social{
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+a.ficon{
+    border: 2px solid rgba(220, 224, 226, 1);
+    margin: 3%;
+    padding: 2%;
+    width: 80px;
+    height: 80px;
+    border-radius: 60px;
+    -moz-border-radius:60px;
+    -webkit-border-radius:60px;
+}
+
+a.ficon:hover{
+    background-color: #89d3e2;
+}
+
+h3.ficon{
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+    font-family: Bahnschrift;
+    font-size: 23px;
+    margin-top: 3%;
+}
+
+.egt{
+    float: center;
+    margin-bottom: 2%;
+    margin-left: 18%;
+    margin-top: 5%;
+}
+
+h3.table1{
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+    font-family: Bahnschrift;
+    font-size: 23px;
+    margin-top: 3%;
+}
+
+p.table1{
+    font-family: tahoma;
+    font-size: 12px;
+    margin: 3%;
+    color: #89d3e2
+}
+
+a.table1{
+    color: #89d3e2;
+    text-decoration: none;
+}
+
+td.table1{
+    padding: 4px;
+    font-family: Bahnschrift;
+    color: rgba(220, 224, 226, 1);
+    border: none;
+    border-bottom: 1px solid rgba(220, 224, 226, 1);
+}
+
+h6.cu{
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+    font-family: Bahnschrift;
+    font-size: 23px;
+    margin-top: 3%;
+}
+
+img.cu{
+    height: 25px;
+    margin: 4%;
+}
+
+ul.cu{
+    list-style: none;
+}
+
+li.cu{
+    font-family: Bahnschrift;
+    color: rgba(220, 224, 226, 1);
+}
+
