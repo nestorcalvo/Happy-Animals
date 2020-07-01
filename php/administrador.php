@@ -8,7 +8,7 @@
 <body>
     <ul>
         <li><a href="voluntarios_add.php">Voluntarios</a></li>
-        <li><a href="solicitudes_add.php">Solicitudes adopción</a></li>
+        <li><a href="solicitudes_add.php">Solicitudes para dar en adopción</a></li>
         <li><a href="adopcion_acept.php">Solicitudes adopción</a></li>
         <li style="float:right"><a class="active" href="../index.html" id="close_sesion">Cerrar sesion</a></li>
 
