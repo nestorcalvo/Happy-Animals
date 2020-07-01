@@ -1,5 +1,5 @@
 <?php 
-require_once"./conexionBDL.php";
+require_once"../php/conexionBDL.php";
 
 verificacion();
 function verificacion(){

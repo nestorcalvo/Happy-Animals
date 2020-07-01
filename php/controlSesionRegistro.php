@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once"./conexionBDL.php";
+require_once"../php/conexionBDL.php";
 
 ingreso();
 function ingreso(){
@@ -34,7 +34,7 @@ function ingreso(){
         header("Location:registro.php?error=true?");
 
     }else{
-        header("Location:sgtapaginiciosesion.php");
+        header("Location:index.html");
         session_destroy();
     }
 }else{
