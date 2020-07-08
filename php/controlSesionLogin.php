@@ -21,7 +21,7 @@ function verificacion(){
 
     if(isset($_SESSION['authadm']) && ($_SESSION['authadm']==true)){
         print("existe");
-        header("Location:home1.php");
+        header("Location:administrador.php");
         }else{
             print("no existe");
             header("Location:login.php?error=true");
