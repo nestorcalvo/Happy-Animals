@@ -416,7 +416,6 @@ div.second-menu{
 
 .second-menu-h:hover{
     transform: scale(1.1);
-    background-color: #42AEC2;
 }
 
 div.position{
@@ -443,7 +442,7 @@ img.position{
 h3.position{
     text-align: center;
     font-size: 40px;
-    font-family: Merriweather;
+    font-family: Bahnschrift;
     font-weight: bold;
     color: #FFFFFF;
 }
@@ -451,8 +450,6 @@ h3.position{
 footer{
    background-color: #393e46;
    width: 100vw;
-   padding-top: 50px;
-   padding-bottom: 50px;
 }
 
 .img-footer{
