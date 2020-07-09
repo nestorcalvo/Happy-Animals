@@ -89,6 +89,13 @@ hr.share{
       hr.share{
         margin-top: 2%;
     }
+
+    .card{
+        width: 100vw;
+        top: 30px;
+        border: none;
+        outline: none; 
+    }
   }
 
 .icon{
@@ -173,12 +180,137 @@ button:active{
     width: 100vw;
 }
 
+img.background{
+    width: 100vw;
+}
+
+p.card-text{
+    color: #646060;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+img.card-img-top{
+    position: relative;
+    height: 250px;
+}
+
+.card{
+    width: 25vw;
+    top: 30px;
+    border: none;
+    outline: none; 
+}
+
+.card1{
+    margin-left: 8.2vw;
+}
+
+.card2{
+    margin-left: 5vw;
+}
+
+.card3{
+    margin-left: 1.9vw;
+}
+
+p.card-text{
+    padding: 0px;
+}
+
+@media only screen and (max-width: 500px) {
+    .card{
+        width: 90vw;
+        margin-top: 30px;
+    }
+    
+    .card1{
+        margin-left: 3vw;
+    }
+    
+    .card2{
+        margin-left: 3vw;
+    }
+    
+    .card3{
+        margin-left: 3vw;
+    }
+}
+
+div.card-title{
+    text-align: center;
+    font-family: Arial Rounded MT Bold;
+    font-size: 20px;
+    font-weight: 250;
+    color: #49494B;
+}
+
+button.card-btn{
+    border: none;
+    background-color: white;
+    font-size: 15px;
+    font-weight: 600;
+    color: #89d3e2;
+}
+
+button.card-btn:hover{
+    color: #7bbaba;
+    filter: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+div.container{
+    margin-top: 60px;
+    margin-bottom: 80px;
+    border: 0.5px solid #dbd1d1;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 4%;
+}
+
+h2.text-center{
+    margin-top: 20px;
+    text-align: center;
+    font-family: Arial Rounded MT Bold;
+    font-size: 28px;
+    font-weight: 250;
+    color: #7bbaba;
+}
+
+label{
+    color: #646060;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid #646060;
+    width: 100%;
+    color: #646060;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+input[type=submit], input[type=button]{
+    border: none;
+    padding: 5px;
+    background-color: #d0c5e2;
+}
+
 img.second-menu{
     display: block;
     margin: auto;
     margin-top: 3%;
     width: 50px;
     height: 50px;
+    margin: 0px;
 }
 
 h3.second-menu{
