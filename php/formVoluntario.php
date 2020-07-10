@@ -55,8 +55,8 @@ session_start();
         <ul class="nav-list">
             <input type="button" value="🞬" id="nav-button" onclick="change()">
             <li class="nav-item"><a href="../adopt-a-pet.html" class="nav-link">Adopt a pet</a></li>
-            <li class="nav-item"><a href="../adopcion" class="nav-link">Give up for adoption</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Low-cost vet clinics</a></li>
+            <li class="nav-item"><a href="../adopcion.html" class="nav-link">Give up for adoption</a></li>
+            <li class="nav-item"><a href="../mapa.html" class="nav-link">Low-cost vet clinics</a></li>
             <li class="nav-item"><a href="php/formVoluntario.php" class="nav-link">Volunteer</a></li>
             <li class="nav-item"><a href="#" class="nav-link" data-toggle="modal" data-target="#modal_info1">Sign in</a></li>
         </ul>
@@ -157,6 +157,10 @@ session_start();
             if(isset($_GET['error']) && $_GET['error']==true ){
                 print("<h4>Error: Verifica tus datos y conexion a internet. </h4>");
                 }
+            if(isset($_GET['error2']) && $_GET['error2']==true ){
+                    print("<h4>Sus datos han sido ingresados con exito, muy pronto nos comunicaremos con usted. </h4>");
+                }
+           
             ?>
                 <br>            
 

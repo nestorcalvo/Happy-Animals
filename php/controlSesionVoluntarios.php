@@ -30,11 +30,11 @@ function infovoluntarios(){
     print($insertar);
 
     if($insertar){
-        header("Location:voluntarios.php?error2=true?");
+        header("Location:formVoluntario.php?error2=true?");
         session_destroy();
         
     }else{
-        header("Location:voluntarios.php?error=true?");
+        header("Location:formVoluntario.php?error=true?");
 
     }
 
