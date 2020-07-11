@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-06-2020 a las 21:46:40
+-- Tiempo de generación: 11-07-2020 a las 05:18:10
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.6
 
@@ -68,7 +68,8 @@ CREATE TABLE `adoptar` (
 INSERT INTO `adoptar` (`id`, `nombre`, `correo`, `tel`, `ingresos`, `tiempo_casa`, `familiares`, `tamano_casa`, `razon`, `revisado`) VALUES
 (1, 'Benjamin', 'benja@gmail.com', 2147483647, 2000, 20, 2, 'Grande', 'Siempre quise uno', 'no'),
 (2, 'Benjamin', 'benja@gmail.com', 4412, 30, 24, 1, 'Grande', 'Siempre quise uno', 'no'),
-(3, 'Hola', 'hola@gmail.com', 123231, 21, 12, 2, 'Grande', 'Quiero uno', 'no');
+(3, 'Hola', 'hola@gmail.com', 123231, 21, 12, 2, 'Grande', 'Quiero uno', 'no'),
+(4, 'Benjamin', 'nestorcalvoa@gmail.com', 12, 212, 22, 2, 'Mediana', 'Ya no lo quiero', 'no');
 
 -- --------------------------------------------------------
 
@@ -93,18 +94,21 @@ CREATE TABLE `dar_adopcion` (
   `desparacitado` text NOT NULL,
   `sano` text NOT NULL,
   `microchip` text NOT NULL,
-  `revisado` varchar(255) NOT NULL DEFAULT 'no'
+  `revisado` varchar(255) NOT NULL DEFAULT 'no',
+  `img_animal` mediumblob DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `dar_adopcion`
 --
 
-INSERT INTO `dar_adopcion` (`id`, `nombre`, `correo`, `tel`, `tiempo`, `razón`, `nombre_animal`, `especie`, `nacimiento_animal`, `sexo`, `tamaño`, `peso`, `vacunado`, `desparacitado`, `sano`, `microchip`, `revisado`) VALUES
-(1, 'Nestor', 'nestorcalvoa@gmail.com', 12, 1, 'pa', 'SA', 'Perro', '2020-06-15', 'Masculino', 'Pequeño', 2, 'si', 'no', 'si', 'no', 'no'),
-(2, 'Hola', 'hola@gmail.co', 215452, 2, 'Porque si', 'Perrito', 'Gato', '2020-06-24', 'Femenino', 'Mediano', 20, 'si', 'si', 'si', 'si', 'no'),
-(3, 'Hola', 'hola@gmail.com', 123123, 2, 'pa', 'Gatito', 'Gato', '2020-06-09', 'Femenino', 'Mediano', 21, 'si', 'si', 'si', 'si', 'no'),
-(4, 'Caja', 'caja@gmail.com', 25215, 12, 'Ya no lo quiero', 'Gatito', 'Conejo', '2020-06-02', 'Femenino', 'Grande', 233, 'no', 'no', 'no', 'no', 'no');
+INSERT INTO `dar_adopcion` (`id`, `nombre`, `correo`, `tel`, `tiempo`, `razón`, `nombre_animal`, `especie`, `nacimiento_animal`, `sexo`, `tamaño`, `peso`, `vacunado`, `desparacitado`, `sano`, `microchip`, `revisado`, `img_animal`) VALUES
+(1, 'Nestor', 'nestorcalvoa@gmail.com', 12, 1, 'pa', 'SA', 'Perro', '2020-06-15', 'Masculino', 'Pequeño', 2, 'si', 'no', 'si', 'no', 'si', NULL),
+(2, 'Hola', 'hola@gmail.co', 215452, 2, 'Porque si', 'Perrito', 'Gato', '2020-06-24', 'Femenino', 'Mediano', 20, 'si', 'si', 'si', 'si', 'no', NULL),
+(3, 'Hola', 'hola@gmail.com', 123123, 2, 'pa', 'Gatito', 'Gato', '2020-06-09', 'Femenino', 'Mediano', 21, 'si', 'si', 'si', 'si', 'no', NULL),
+(4, 'Caja', 'caja@gmail.com', 25215, 12, 'Ya no lo quiero', 'Gatito', 'Conejo', '2020-06-02', 'Femenino', 'Grande', 233, 'no', 'no', 'no', 'no', 'no', NULL),
+(12, 'as', 'as@asa', 1212, 1, 'asas', 'asas', 'Perro', '1111-11-11', 'Masculino', 'Pequeño', 1, 'si', 'no', 'no', 'no', 'no', ''),
+(13, 'ass', 'as@asa', 12221, 21, 'Siempre quise uno', 'dsad', 'Perro', '1121-01-22', 'Masculino', 'Pequeño', 3, 'no', 'si', 'no', 'no', 'si', '');
 
 -- --------------------------------------------------------
 
@@ -140,7 +144,33 @@ INSERT INTO `usuarios` (`id`, `usuario`, `nombre`, `apellidos`, `correo`, `contr
 (9, 'andres90', 'andres ', 'alzate jaramillo', 'andres.alzate@gmail.com', '753753', ' 753753', 'barranquilla', 'barranquilla', '2013-09-22'),
 (13, 'marta50', 'marta', 'ramirez', 'marta.rami@gmail.com', '456456', ' 456456', 'pereira', 'cra 251 #18-73', '2010-06-09'),
 (15, 'victoria11', 'victoria', 'reyes', 'vickypanda22@hotmail.com', '1234', ' 1234', 'medellin', 'diag 48f # 53-35', '1996-09-11'),
-(16, 'pablo24', 'pablo', 'ramos diaz', 'pablo.ramos', '854854', ' 854854', 'carepa', 'cl 84 # 18-45', '2020-06-23');
+(16, 'pablo24', 'pablo', 'ramos diaz', 'pablo.ramos', '854854', ' 854854', 'carepa', 'cl 84 # 18-45', '2020-06-23'),
+(17, '', '', '', '', '', ' ', '', '', '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `voluntarios`
+--
+
+CREATE TABLE `voluntarios` (
+  `nombres` varchar(151) NOT NULL,
+  `apellidos` varchar(151) NOT NULL,
+  `fecha` date NOT NULL,
+  `correo` varchar(151) NOT NULL,
+  `direccion` varchar(151) NOT NULL,
+  `celular` mediumint(30) UNSIGNED NOT NULL,
+  `telefono` mediumint(30) UNSIGNED NOT NULL,
+  `ocupacion` varchar(151) NOT NULL,
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `voluntarios`
+--
+
+INSERT INTO `voluntarios` (`nombres`, `apellidos`, `fecha`, `correo`, `direccion`, `celular`, `telefono`, `ocupacion`, `id`) VALUES
+('Test', 'Test', '0012-01-21', '1@asa', 'Calle 52 #19 - 06', 121, 332, 'Estudiante', 1);
 
 --
 -- Índices para tablas volcadas
@@ -173,6 +203,12 @@ ALTER TABLE `usuarios`
   ADD UNIQUE KEY `indiceu` (`usuario`) USING HASH;
 
 --
+-- Indices de la tabla `voluntarios`
+--
+ALTER TABLE `voluntarios`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -180,25 +216,31 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `administradores`
 --
 ALTER TABLE `administradores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `adoptar`
 --
 ALTER TABLE `adoptar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `dar_adopcion`
 --
 ALTER TABLE `dar_adopcion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT de la tabla `voluntarios`
+--
+ALTER TABLE `voluntarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

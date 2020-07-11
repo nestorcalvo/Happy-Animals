@@ -9,14 +9,14 @@
 
     $nombre = $_POST['nombre'];
     $correo = $_POST['correo'];
-    $tel = $_POST['celular'];
+    $tel = $_POST['tel'];
     $tiempo = $_POST['tiempo'];
     $razon = $_POST['razon'];
-    $nombre_animal = $_POST['nombre_A'];
-    $especie = $_POST['animals_list'];
-    $fecha_nacimiento = $_POST['fecha_nacimiento'];
-    $sex = $_POST['animals_sex'];
-    $tamaño = $_POST['tamaño_animal'];
+    $nombre_animal = $_POST['nombre_animal'];
+    $especie = $_POST['especie'];
+    $fecha_nacimiento = $_POST['nacimiento_animal'];
+    $sex = $_POST['sexo'];
+    $tamaño = $_POST['tamaño'];
     $peso = $_POST['peso'];
     if(isset($_POST['vacunado'])){
         $vacunado = 'si';
@@ -43,13 +43,31 @@
         $microchip = 'no';
     }
 
+    $target_dir = "../uploads/";
+    $file_name = basename($_FILES[$_POST["image_animal"]][$_POST["nombre_animal"]]);
+    $target_file = $target_dir .$file_name;
+    $uploadOk = 1;
+    $fileType = pathinfo( $target_file,PATHINFO_EXTENSION);
+    // Check if image file is a actual image or fake image
+    if(isset($_POST["submit"])) {
+        $check = getimagesize($_FILES[$_POST["image_animal"]][$_POST["nombre_animal"]]);
+        if($check !== false) {
+            echo "File is an image - " . $check["mime"] . ".";
+            $uploadOk = 1;
+        } else {
+            echo "File is not an image.";
+            $uploadOk = 0;
+        }
+    }
+
     #sentencia
-    $sql = "INSERT INTO dar_adopcion(nombre,correo,tel,tiempo,razón,nombre_animal,especie,nacimiento_animal,sexo,tamaño,peso,vacunado,desparacitado,sano,microchip) VALUES('$nombre',
+    $sql = "INSERT INTO dar_adopcion(nombre,correo,tel,tiempo,razón,nombre_animal,especie,nacimiento_animal,sexo,tamaño,peso,vacunado,desparacitado,sano,microchip,img_animal) VALUES('$nombre',
                                         '$correo',
                                         '$tel',
                                         '$tiempo',
                                         '$razon','$nombre_animal','$especie','$fecha_nacimiento','$sex','$tamaño',
-                                        '$peso','$vacunado','$desparacitado','$sano','$microchip')";
+                                        '$peso','$vacunado','$desparacitado','$sano','$microchip','".$file_name."')";
+
     $ejecutar = $conectar->query($sql);
 
     if(!$ejecutar){
