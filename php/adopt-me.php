@@ -7,9 +7,9 @@
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <link rel="stylesheet" type="text/css" href="../css/style3.css">
    
-    <script type="text/javascript" src="js/java.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../js/java.js" charset="UTF-8"></script>
     <script src="jquery-3.4.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -24,10 +24,10 @@
             <a href="#"><h4 class="d-block1 w-100">Donate now</h4></a>                        
           </div>
           <div class="carousel-item">
-            <a href="php/formVoluntario.php"><h4 class="d-block1 w-100">Volunteer</h4></a>
+            <a href="formVoluntario.php"><h4 class="d-block1 w-100">Volunteer</h4></a>
           </div>
           <div class="carousel-item">
-            <a href="adopt-a-pet.html"><h4 class="d-block1 w-100">Adopt</h4></a>
+            <a href="../adopt-a-pet.html"><h4 class="d-block1 w-100">Adopt</h4></a>
           </div>
         </div>
     </div>
@@ -35,7 +35,7 @@
     <div class="navbar fixed">
 
         <div class="col-lg-6 col-md-12 logo">
-            <a href="index.html" class="navbar-brand"><img class="logo" src="img/completelogo.PNG" alt="HappyAnimals"></a>          
+            <a href="../index.html" class="navbar-brand"><img class="logo" src="../img/completelogo.PNG" alt="HappyAnimals"></a>          
         </div>
 
         <div class="col-lg-2 col-md-12">
@@ -45,9 +45,9 @@
         <div class="col-lg-4 col-md-12">            
  
             <div class="multi-button">
-                <button><img class="icon" src="img/gatos.png" alt="cats"></button>
-                <button><img class="icon" src="img/perro.png" alt="dogs"></button>
-                <button><img class="icon" src="img/conejo.png" alt="bunnies"></button>
+                <button><img class="icon" src="../img/gatos.png" alt="cats"></button>
+                <button><img class="icon" src="../img/perro.png" alt="dogs"></button>
+                <button><img class="icon" src="../img/conejo.png" alt="bunnies"></button>
             </div>
 
         </div>        
@@ -56,10 +56,10 @@
     <nav class="navigation">
         <ul class="nav-list">
             <input type="button" value="🞬" id="nav-button" onclick="change()">
-            <li class="nav-item"><a href="adopt-a-pet.html" class="nav-link">Adopt a pet</a></li>
-            <li class="nav-item"><a href="adopcion.html" class="nav-link">Give up for adoption</a></li>
-            <li class="nav-item"><a href="mapa.html" class="nav-link">Low-cost vet clinics</a></li>
-            <li class="nav-item"><a href="php/formVoluntario.php" class="nav-link">Volunteer</a></li>
+            <li class="nav-item"><a href="adopt-a-pet.php" class="nav-link">Adopt a pet</a></li>
+            <li class="nav-item"><a href="../adopcion.html" class="nav-link">Give up for adoption</a></li>
+            <li class="nav-item"><a href="../mapa.html" class="nav-link">Low-cost vet clinics</a></li>
+            <li class="nav-item"><a href="formVoluntario.php" class="nav-link">Volunteer</a></li>
             <li class="nav-item"><a href="#" class="nav-link" data-toggle="modal" data-target="#modal_info1">Sign in</a></li>
         </ul>
 
@@ -84,11 +84,11 @@
 
                             <button class="btn btn-block" id="form-button" type="submit">Sing in</button><br>
 
-                            <a href="php/recuperarcontrasena.php" class="form-title">Forgot your password?</a><br>
+                            <a href="recuperarcontrasena.php" class="form-title">Forgot your password?</a><br>
 
-                            <a href="php/registro.php" class="form-title">Not registered yet? Sign up!</a>
+                            <a href="registro.php" class="form-title">Not registered yet? Sign up!</a>
 
-                            <img src="img/logo.png" alt="logo" class="logo1">
+                            <img src="../img/logo.png" alt="logo" class="logo1">
                         </form>
                     </div>
                 </div>
@@ -99,36 +99,82 @@
     <div class="position">
         <p class="position">Home / Adopt a Pet / Adopt me</p>
         <h3 class="position">Adoption</h3>
-        <img class="position" src="img/paw.png" alt="">
+        <img class="position" src="../img/paw.png" alt="">
     </div>
 
     <div class="info">
         <div class="row mrg">
             <div class="col-lg-4 col-md-12">
-                <img class="info" src="img/adp8.jpg" alt="">
+                <img class="info" src="../img/adp8.jpg" alt="">
             </div>
+            <?php 
+            require_once"./conexionBDL.php";
+            $mysql = conexionSQL();
+
+            //tomar el id aqui
+            //if(isset($_GET['id'])){
+              //  $id=$_GET['id'];
+                  $id="1";
+                
+
+                $qv =("SELECT * FROM dar_adopcion WHERE id='$id' ");
+                    $resultado = $mysql->query($qv); 
+                    $fila = $resultado->fetch_array(MYSQLI_ASSOC);
+                    
+   
+
+                   
+                    $date = date_create($fila["nacimiento_animal"]);
+                    $fecha = new DateTime("now", new DateTimeZone('America/Bogota'));
+                    $fechaActual= $fecha->format('Y-m-d');
+                    
+                    $datetime1 = date_create($fila["nacimiento_animal"]);
+                    $datetime2 = date_create($fechaActual);
+                    $contador = date_diff($datetime1, $datetime2);
+                      $differenceFormat = '%y';
+                      $differenceFormat2 = '%m';
+                      $differenceFormat3 = '%d';
+                      
+                //}
+            ?>
             <div class="col-lg-4 col-md-12">
-                <h2 class="info">Hi, my name is ASTRO</h2>
+                <h2 class="info">Hi, my name is <?php echo $fila["nombre_animal"]; ?></h2>
                 <p class="info">I can come home with you today!</p>
                 <hr class="info">
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                         <h3 class="info">Age</h3>
-                        <p class="info">Estimated: </p>
+                        <p class="info"><?php if( $contador->format($differenceFormat)=="1"){
+                        echo $contador->format($differenceFormat)."&nbsp"."Year"."&nbsp";
+                      }
+                      if( $contador->format($differenceFormat)>"1"){
+                        echo $contador->format($differenceFormat)."&nbsp"."Years"."&nbsp";
+                      }
+                      if( $contador->format($differenceFormat2)=="1"){
+                        echo $contador->format($differenceFormat2)."&nbsp"."Month"."&nbsp";
+                      }
+                      if( $contador->format($differenceFormat2)>"1"){
+                        echo $contador->format($differenceFormat2)."&nbsp"."Months"."&nbsp";
+                      }
+                      if( $contador->format($differenceFormat3)=="1"){
+                        echo $contador->format($differenceFormat3)."&nbsp"."Day"."&nbsp";
+                      }if( $contador->format($differenceFormat3)>"1"){
+                        echo $contador->format($differenceFormat3)."&nbsp"."Days"."&nbsp";
+                      } ?></p>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <h3 class="info">Sex</h3>
-                        <p class="info">Male Neutered</p>
+                        <p class="info"><?php echo $fila["sexo"]; ?></p>
                     </div>
                 </div>
                 <hr div class="share">
                 <div class="share">
                     <h3 class="share">Share Me</h3>
-                    <p class="share">Do you have a friend or family member who wants to adopt me? Share my information with them!</p>
+                    <p class="share">Do you have a friend or family member who wants to adopt me? Share my information with them</p>
                     <div class="share1">
-                        <a href="#" class="share"><img class="share" src="img/instagram-sketched.png" alt="Instagram"></a>
-                        <a href="#" class="share"><img class="share" src="img/facebook.png" alt="facebook"></a>
-                        <a href="#" class="share"><img class="share" src="img/twitter.png" alt="twitter"></a>
+                        <a href="#" class="share"><img class="share" src="../img/instagram-sketched.png" alt="Instagram"></a>
+                        <a href="#" class="share"><img class="share" src="../img/facebook.png" alt="facebook"></a>
+                        <a href="#" class="share"><img class="share" src="../img/twitter.png" alt="twitter"></a>
                     </div>
                     
                 </div>
@@ -138,25 +184,25 @@
                 <div class="pet-info">
                     <button class="info">ADOPT ME</button>
                     <h4 class="pet-info">Location</h4>
-                    <p class="pet-info">744 Evergreen Terrace - Medellín</p>
+                    <p class="pet-info"><?php echo $fila["direccion"]; ?></p>
                     <hr class="pet-info">
-                    <h4 class="pet-info">Primary color</h4>
-                    <p class="pet-info">Gray</p>
-                    <hr class="pet-info">
-                    <h4 class="pet-info">Secondary color</h4>
-                    <p class="pet-info">White</p>
+                    <h4 class="pet-info">Color</h4>
+                    <p class="pet-info"><?php echo $fila["color"]; ?></p>
                     <hr class="pet-info">
                     <h4 class="pet-info">Size</h4>
-                    <p class="pet-info">Medium</p>
+                    <p class="pet-info"><?php echo $fila["tamaño"]; ?></p>
                     <hr class="pet-info">
                     <h4 class="pet-info">Weight</h4>
-                    <p class="pet-info">24 kg</p>
+                    <p class="pet-info"><?php echo $fila["peso"]."Kg"; ?></p>
                     <hr class="pet-info">
                     <h4 class="pet-info">Status</h4>
-                    <p class="pet-info">Normal</p>
+                    <p class="pet-info">Vacunado:<?php echo "&nbsp".$fila["vacunado"];?></p>
+                    <p class="pet-info">Desparacitado:<?php echo "&nbsp".$fila["desparacitado"];?></p>
+                    <p class="pet-info">Sano:<?php echo "&nbsp".$fila["sano"];?></p>
+                    <p class="pet-info">Microchip:<?php echo "&nbsp".$fila["microchip"];?></p>
                     <hr class="pet-info">
                     <h4 class="pet-info">Pet ID</h4>
-                    <p class="pet-info">A0012</p>
+                    <p class="pet-info"><?php echo $fila["id"]; ?></p>
                 </div>                
             </div>
         </div>
@@ -166,28 +212,28 @@
         <div class="row">
             <div class="col-lg-3 col-md-12">
                 <a href="adopt-a-pet.html" class="second-menu"><div class="second-menu-h">
-                    <img class="second-menu" src="img/paw.png" alt="HappyAnimals">
+                    <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
                     <h3 class="second-menu">Adopt</h3>
                     <p class="second-menu">Save a life today and add someone special to your family</p>
                 </div></a>
             </div>
             <div class="col-lg-3 col-md-12">
                 <a href="" class="second-menu"><div class="second-menu-h">
-                    <img class="second-menu" src="img/paw.png" alt="HappyAnimals">
+                    <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
                     <h3 class="second-menu">Donate</h3>
                     <p class="second-menu">Help give animals the life they deserve</p>
                 </div></a>
             </div>
             <div class="col-lg-3 col-md-12">
                 <a href="mapa.html" class="second-menu"><div class="second-menu-h">
-                    <img class="second-menu" src="img/paw.png" alt="HappyAnimals">
+                    <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
                     <h3 class="second-menu">Low-Cost Clinics</h3>
                     <p class="second-menu">Find directions here</p>
                 </div></a>
             </div>
             <div class="col-lg-3 col-md-12">
                 <a href="php/formVoluntario.php" class="second-menu"><div class="second-menu-h">
-                    <img class="second-menu" src="img/paw.png" alt="HappyAnimals">
+                    <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
                     <h3 class="second-menu">Volunteer</h3>
                     <p class="second-menu">Help at the shelter or foster some furry friends</p>
                 </div></a>
@@ -201,23 +247,23 @@
                 <h6 class="cu">Contact Us</h6>
                              
                 <ul class="cu">
-                    <li class="cu"><img class="cu" src="img/telefono.png" alt="phone">+57 123 456 7890</li>
-                    <li class="cu"><img class="cu" src="img/correo-electronico.png" alt="email">happyanimals@foundation.com</li>
-                    <li class="cu"><img class="cu" src="img/alfiler.png" alt="map">744 Evergreen Terrace - Medellín, Antioquia</li>
+                    <li class="cu"><img class="cu" src="../img/telefono.png" alt="phone">+57 123 456 7890</li>
+                    <li class="cu"><img class="cu" src="../img/correo-electronico.png" alt="email">happyanimals@foundation.com</li>
+                    <li class="cu"><img class="cu" src="../img/alfiler.png" alt="map">744 Evergreen Terrace - Medellín, Antioquia</li>
                 </ul>
             </div>
 
             <div class="col-lg-4 col-md-12">
                 <h3 class="ficon">Follow Us!</h3>
                 <div class="social">
-                    <a href="#" class="ficon"><img class="icon-footer" src="img/instagram-sketched.png" alt="ig"></a>
-                    <a href="#" class="ficon"><img class="icon-footer" src="img/facebook.png" alt="fb"></a>
-                    <a href="#" class="ficon"><img class="icon-footer" src="img/twitter.png" alt="tl"></a>
-                    <a href="#" class="ficon"><img class="icon-footer" src="img/yt.png" alt="yt"></a>
+                    <a href="#" class="ficon"><img class="icon-footer" src="../img/instagram-sketched.png" alt="ig"></a>
+                    <a href="#" class="ficon"><img class="icon-footer" src="../img/facebook.png" alt="fb"></a>
+                    <a href="#" class="ficon"><img class="icon-footer" src="../img/twitter.png" alt="tl"></a>
+                    <a href="#" class="ficon"><img class="icon-footer" src="../img/yt.png" alt="yt"></a>
                 </div>
 
-                <img class="img-footer" src="img/logo.png" alt="Happy Animals">
-                <img  src="img/logo1.png" alt="Happy Animals">
+                <img class="img-footer" src="../img/logo.png" alt="Happy Animals">
+                <img  src="../img/logo1.png" alt="Happy Animals">
             </div>
 
             <div class="col-lg-4 col-md-12">
