@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-07-2020 a las 05:12:59
+-- Tiempo de generación: 11-07-2020 a las 05:18:10
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.6
 
@@ -105,16 +105,10 @@ CREATE TABLE `dar_adopcion` (
 INSERT INTO `dar_adopcion` (`id`, `nombre`, `correo`, `tel`, `tiempo`, `razón`, `nombre_animal`, `especie`, `nacimiento_animal`, `sexo`, `tamaño`, `peso`, `vacunado`, `desparacitado`, `sano`, `microchip`, `revisado`, `img_animal`) VALUES
 (1, 'Nestor', 'nestorcalvoa@gmail.com', 12, 1, 'pa', 'SA', 'Perro', '2020-06-15', 'Masculino', 'Pequeño', 2, 'si', 'no', 'si', 'no', 'si', NULL),
 (2, 'Hola', 'hola@gmail.co', 215452, 2, 'Porque si', 'Perrito', 'Gato', '2020-06-24', 'Femenino', 'Mediano', 20, 'si', 'si', 'si', 'si', 'no', NULL),
-(3, 'Hola', 'hola@gmail.com', 123123, 2, 'pa', 'Gatito', 'Gato', '2020-06-09', 'Femenino', 'Mediano', 21, 'si', 'si', 'si', 'si', 'si', NULL),
-(4, 'Caja', 'caja@gmail.com', 25215, 12, 'Ya no lo quiero', 'Gatito', 'Conejo', '2020-06-02', 'Femenino', 'Grande', 233, 'no', 'no', 'no', 'no', 'si', NULL),
-(6, '', '', 0, 0, '', 'IMagen', '', '1854-11-25', '', '', 52, 'si', 'si', 'si', 'si', 'no', ''),
-(7, '', '', 0, 0, '', '', '', '0000-00-00', '', '', 25, 'si', 'no', 'si', 'no', 'no', ''),
-(8, '', '', 0, 0, '', 'aaa', 'Perro', '3331-12-31', 'Masculino', 'Pequeño', 2, 'no', 'no', 'si', 'no', 'no', ''),
-(9, '', '', 0, 0, '', 'Tes', 'Perro', '2222-01-22', 'Masculino', 'Pequeño', 12, 'no', 'si', 'si', 'no', 'no', ''),
-(10, '', '', 0, 0, '', 'as', 'Perro', '1222-01-01', 'Masculino', 'Pequeño', 12, 'si', 'si', 'no', 'no', 'no', ''),
-(11, '', '', 0, 0, '', 'as', 'Perro', '0000-00-00', 'Masculino', 'Pequeño', 12, 'no', 'si', 'no', 'no', 'no', ''),
+(3, 'Hola', 'hola@gmail.com', 123123, 2, 'pa', 'Gatito', 'Gato', '2020-06-09', 'Femenino', 'Mediano', 21, 'si', 'si', 'si', 'si', 'no', NULL),
+(4, 'Caja', 'caja@gmail.com', 25215, 12, 'Ya no lo quiero', 'Gatito', 'Conejo', '2020-06-02', 'Femenino', 'Grande', 233, 'no', 'no', 'no', 'no', 'no', NULL),
 (12, 'as', 'as@asa', 1212, 1, 'asas', 'asas', 'Perro', '1111-11-11', 'Masculino', 'Pequeño', 1, 'si', 'no', 'no', 'no', 'no', ''),
-(13, 'ass', 'as@asa', 12221, 21, 'Siempre quise uno', 'dsad', 'Perro', '1121-01-22', 'Masculino', 'Pequeño', 3, 'no', 'si', 'no', 'no', 'no', '');
+(13, 'ass', 'as@asa', 12221, 21, 'Siempre quise uno', 'dsad', 'Perro', '1121-01-22', 'Masculino', 'Pequeño', 3, 'no', 'si', 'no', 'no', 'si', '');
 
 -- --------------------------------------------------------
 
