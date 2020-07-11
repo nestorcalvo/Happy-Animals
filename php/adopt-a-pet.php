@@ -185,9 +185,9 @@
                     ?>
                         <div class="col-lg-4 col-md-12">
                             <div class="card w-75 card-a" style="width: 18rem;">
-                                <a href="adopt-me.html"><div class="hover-animation one" data-text="ADOPT ME"></div></a>
+                                <a href="adopt-me.php"><div class="hover-animation one" data-text="ADOPT ME"></div></a>
                                 <div class="card-body">
-                                    <a href="adopt-me.html"><div class="card-title" id="adp-title"><?php echo $pila_name[($j)+(3*$i)] ?></div></a>
+                                    <a href="adopt-me.php"><div class="card-title" id="adp-title"><?php echo $pila_name[($j)+(3*$i)] ?></div></a>
                                     <p class="card-text">
                                     <div class="gender"><?php echo $pila_gender[($j)+(3*$i)] ?></div>
                                     <div class="age">Estimated: <?php echo $pila_age[($j)+(3*$i)] ?></div>
@@ -220,9 +220,9 @@
                         ?>
                             <div class="col-lg-4 col-md-12">
                                 <div class="card w-75 card-a" style="width: 18rem;">
-                                    <a href="adopt-me.html"><div class="hover-animation one" data-text="ADOPT ME"></div></a>
+                                    <a href="adopt-me.php"><div class="hover-animation one" data-text="ADOPT ME"></div></a>
                                     <div class="card-body">
-                                        <a href="adopt-me.html"><div class="card-title" id="adp-title"><?php echo $pila_name[($h)+(3*$i)] ?></div></a>
+                                        <a href="adopt-me.php"><div class="card-title" id="adp-title"><?php echo $pila_name[($h)+(3*$i)] ?></div></a>
                                         <p class="card-text">
                                         <div class="gender"><?php echo $pila_gender[($h)+(3*$i)] ?></div>
                                         <div class="age">Estimated: <?php echo $pila_age[($h)+(3*$i)] ?></div>
