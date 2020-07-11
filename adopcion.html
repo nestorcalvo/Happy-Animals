@@ -21,7 +21,7 @@
             <a href="php/formVoluntario.php"><h4 class="d-block1 w-100">Volunteer</h4></a>
           </div>
           <div class="carousel-item">
-            <a href="adopt-a-pet.html"><h4 class="d-block1 w-100">Adopt</h4></a>
+            <a href="php/adopt-a-pet.php"><h4 class="d-block1 w-100">Adopt</h4></a>
           </div>
         </div>
     </div>
@@ -50,7 +50,7 @@
     <nav>
         <ul class="nav-list">
             <input type="button" value="🞬" id="nav-button" onclick="change()">
-            <li class="nav-item"><a href="adopt-a-pet.html" class="nav-link">Adopt a pet</a></li>
+            <li class="nav-item"><a href="php/adopt-a-pet.php" class="nav-link">Adopt a pet</a></li>
             <li class="nav-item"><a href="adopcion.html" class="nav-link">Give up for adoption</a></li>
             <li class="nav-item"><a href="mapa.html" class="nav-link">Low-cost vet clinics</a></li>
             <li class="nav-item"><a href="php/formVoluntario.php" class="nav-link">Volunteer</a></li>
@@ -66,7 +66,7 @@
                     </div>
     
                     <div class="modal-body">
-                        <form method="post" action="php/controlSesionLogin.php">
+                        <form method="post" action="../php/controlSesionLogin.php">
                             <div class="form-group">
                                 <label class="label-title">Nickname</label>
                                 <input class="form-control form-control-sm" type="text" name="usuario" required>
@@ -104,7 +104,7 @@
                 <form action="php/form1.php" method="post" id="animals">
                     <br>
                     <label>Name</label><br>
-                    <input type="text" name="nombre" required>
+                    <input type="text" name="nombre" id="nombre" required>
                     <br><br>
         
                     <label>E-mail</label><br>
@@ -112,7 +112,7 @@
                     <br><br>
         
                     <label>Phone Number</label><br>
-                    <input type="text" name="celular" required>
+                    <input type="text" name="tel" required>
                     <br><br>
         
                     <label>How long have you been with the pet (in days) </label><br>
@@ -123,20 +123,21 @@
                     
                     <input type="text" name="razon" placeholder="Give a detailed explanation" required
                            size="50" style="height: 200px">
-                </form>
+                <!--</form>-->
+
             </div>
         </div>
         <div class="col-lg-6 col-md-12">
             <div class="form">
                 <h2 class="giveup">Animal Information</h2>
-                <form action="php/form1.php" method="post" id="animals">
+                <!--<form action="php/form1.php" method="post" id="animals_2">-->
                     <br>
                     <label>Name </label><br>
-                    <input type="text" name="nombre_A" required>
+                    <input type="text" name="nombre_animal" required>
                     <br><br>
 
                     <label for="especie">Species</label><br>
-                    <select id="especie" name="animals_list" form="animals">
+                    <select id="especie" name="especie" form="animals">
                         <option value="Perro">Dog</option>
                         <option value="Gato">Cat</option>
                         <option value="Conejo">Small mammal</option>
@@ -144,18 +145,18 @@
                     <br><br>
 
                     <label>Animal's date of birth</label><br>
-                    <input type="date" name="fecha_nacimiento" placeholder="dd/mm/yy" required>
+                    <input type="date" name="nacimiento_animal" placeholder="dd/mm/yy" required>
                     <br><br>
 
-                    <label for="sex">Sex </label><br>
-                    <select id="sex" name="animals_sex" form="animals" required>
+                    <label for="sexo">Sex </label><br>
+                    <select id="sexo" name="sexo" form="animals" required>
                         <option value="Masculino">Male</option>
                         <option value="Femenino">Female</option>
                     </select>
                     <br><br>
 
                     <label for="tamaño">Size</label><br>
-                    <select id="tamaño" name="tamaño_animal" form="animals" required>
+                    <select id="tamaño" name="tamaño" form="animals" required>
                         <option value="Pequeño">Small</option>
                         <option value="Mediano">Medium</option>
                         <option value="Grande">Large</option>
@@ -181,7 +182,11 @@
                     <input type="checkbox" name="microchip" id="microchip">
                     <label for="microchip"> Microchip</label><br>
 
-                    <input type="submit" value="Send">
+                    <br><label for="image_animal">Upload a picture</label><br>
+                    <input type="file" name="image_animal" id="image_animal" accept="image/*">
+
+
+                    <input type="submit" id="submit_button" value="Send">
             </form>
             <a href="index.html">
                 <input type="button" value="Back to Homepage">
@@ -283,6 +288,7 @@
     <div class="cright">
         <h3 class="cright"> Copyright © 2020 Happy Animals. All Rights Reserved. Web Application by Victoria, Nestor & Manuela</h3>
     </div>
+
 
 </body>
 </html>

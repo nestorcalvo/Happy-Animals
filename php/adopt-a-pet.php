@@ -22,7 +22,7 @@
             <a href="#"><h4 class="d-block1 w-100">Donate now</h4></a>
         </div>
         <div class="carousel-item">
-            <a href="#"><h4 class="d-block1 w-100">Volunteer</h4></a>
+            <a href="../php/formVoluntario.php"><h4 class="d-block1 w-100">Volunteer</h4></a>
         </div>
         <div class="carousel-item">
             <a href="adopt-a-pet.php"><h4 class="d-block1 w-100">Adopt</h4></a>
@@ -57,7 +57,7 @@
         <li class="nav-item"><a href="../php/adopt-a-pet.php" class="nav-link">Adopt a pet</a></li>
         <li class="nav-item"><a href="../adopcion.html" class="nav-link">Give up for adoption</a></li>
         <li class="nav-item"><a href="../mapa.html" class="nav-link">Low-cost vet clinics</a></li>
-        <li class="nav-item"><a href="../php/voluntarios.php" class="nav-link">Volunteer</a></li>
+        <li class="nav-item"><a href="../php/formVoluntario.php" class="nav-link">Volunteer</a></li>
         <li class="nav-item"><a href="#" class="nav-link" data-toggle="modal" data-target="#modal_info1">Sign in</a></li>
     </ul>
 
@@ -300,7 +300,7 @@
                 </div></a>
         </div>
         <div class="col-lg-3 col-md-12">
-            <a href="../php/voluntarios.php" class="second-menu"><div class="second-menu-h">
+            <a href="../php/formVoluntario.php" class="second-menu"><div class="second-menu-h">
                     <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
                     <h3 class="second-menu">Volunteer</h3>
                     <p class="second-menu">Help at the shelter or foster some furry friends</p>
