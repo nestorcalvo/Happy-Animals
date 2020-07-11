@@ -1,4 +1,5 @@
 <?php
+    error_reporting(E_ALL ^ E_NOTICE);
     #Contectarse al servidor
     $conectar = new mysqli('localhost', 'root', '', 'happy_animals');
     $conectar->set_charset("utf8");

@@ -310,7 +310,6 @@ img.second-menu{
     margin-top: 3%;
     width: 50px;
     height: 50px;
-    margin: 0px;
 }
 
 h3.second-menu{
@@ -323,6 +322,8 @@ p.second-menu{
     font-size: 15px;
     color: white;
     text-align: center;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 a.second-menu{
@@ -379,7 +380,7 @@ img.position{
 h3.position{
     text-align: center;
     font-size: 40px;
-    font-family: Bahnschrift;
+    font-family: Arial Rounded MT Bold;
     font-weight: bold;
     color: #FFFFFF;
 }

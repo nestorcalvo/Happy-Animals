@@ -1,9 +1,22 @@
+*{
+    /*border: 1px solid;*/
+}
+
+body{
+    margin: 0;
+}
+
+nav{
+    background-color: #333;
+    margin: 0;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    
 }
 
 li {
@@ -16,6 +29,8 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family: Bahnschrift;
+    font-size: 14px;
 }
 
 li a:hover:not(.active) {
@@ -23,5 +38,55 @@ li a:hover:not(.active) {
 }
 
 .active {
-    background-color: #4CAF50;
+    background-color: #89d3e2;
+}
+
+.active:hover{
+    background-color: #7bbaba;
+}
+
+hr{
+    border: 1px solid #8b9191;
+}
+
+h2{
+    font-family: Arial Rounded MT Bold;
+    font-size: 17px;
+    color: #49494B;
+    margin-left: 2%;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid #8b9191;
+    margin-left: 2%;
+}
+
+label{
+    color: #646060;
+    font-size: 13px;
+    font-weight: 200;
+    font-family: Helvetica;
+    letter-spacing: 1px;
+    margin-left: 2%;
+}
+
+input[type=submit]{
+    border: none;
+    background-color: #89d3e2;
+    color: #646060;
+    font-size: 15px;
+    padding: 4px;
+    width: 10.8%;
+    margin-left: 2%;
+}
+
+input[type=submit]:hover{
+    background-color: #7bbaba;
+}
+
+
+img{
+    display: block;
+    margin: auto;
 }
