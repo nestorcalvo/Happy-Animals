@@ -60,29 +60,46 @@
             <li class="nav-item"><a href="adopcion.php" class="nav-link">Give up for adoption</a></li>
             <li class="nav-item"><a href="mapa.php" class="nav-link">Low-cost vet clinics</a></li>
             <li class="nav-item"><a href="formVoluntario.php" class="nav-link">Volunteer</a></li>
+            <?php
+                if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
+            ?>
+            <li class="nav-item"><a href="index.php" class="nav-link" ><?php echo $_GET['id'] ?></a></li>
+            <?php
+                }else{
+            ?>
             <li class="nav-item"><a href="#" class="nav-link" data-toggle="modal" data-target="#modal_info1">Sign in</a></li>
+            <?php
+                }
+            ?>
         </ul>
 
+        <?php
 
-        <div class="modal fade" id="modal_info1">
+        if (isset($_GET['error']) && $_GET['error'] == true) {
+
+        ?>
+            <div class="modal fade" id="modal_info1">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title w-100">Sign in</h4>
                         <button class="close" data-dismiss="modal">&times;</button>
                     </div>
-    
+
                     <div class="modal-body">
                         <form  method="post" action="controlSesionLogin.php">
                             <div class="form-group">
-                                <label class="label-title">Nickname</label>
-                                <input class="form-control form-control-sm" type="text" name="name" required>
+                                <h2>Usuario o contraseña incorrectos</h2>
                             </div>
                             <div class="form-group">
-                                <label class="label-title">Password	</label><input class="form-control form-control-sm" type="password" name="password" size="6" maxlength="10" required>
+                                <label class="label-title">Nickname</label>
+                                <input class="form-control form-control-sm" type="text" name="usuario" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="label-title">Password	</label><input class="form-control form-control-sm" type="password" name="contrasena" size="6" maxlength="10" required>
                             </div>
     
-                            <button class="btn btn-block" id="form-button" type="submit">Sing in</button><br>
+                            <button class="btn btn-block" id="index.php" name="index" type="submit">Sing in</button><br>
 
                             <a href="recuperarcontrasena.php" class="form-title">Forgot your password?</a><br>
     
@@ -94,6 +111,47 @@
                 </div>
             </div>
         </div>
+        <?php
+        }else{
+
+        ?>
+            <div class="modal fade" id="modal_info1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title w-100">Sign in</h4>
+                        <button class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form  method="post" action="controlSesionLogin.php">
+
+                            <div class="form-group">
+                                <label class="label-title">Nickname</label>
+                                <input class="form-control form-control-sm" type="text" name="usuario" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="label-title">Password	</label><input class="form-control form-control-sm" type="password" name="contrasena" size="6" maxlength="10" required>
+                            </div>
+
+                            <button class="btn btn-block" id="index.php" name="index" type="submit">Sing in</button><br>
+
+                            <a href="recuperarcontrasena.php" class="form-title">Forgot your password?</a><br>
+
+                            <a href="registro.php" class="form-title">Not registered yet? Sign up!</a>
+
+                            <img src="../img/logo.png" alt="logo" class="logo1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
+        }
+        ?>
+
+
+
 
         <div>
             <img src="../img/dog5.jpg" alt="dog" class="bg1">

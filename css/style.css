@@ -191,7 +191,12 @@ button:active{
     color: black;
     text-align: center;
 }
-
+#index\.php{
+    background-color: #89d3e2;
+    font-family: Bahnschrift;
+    color: black;
+    font-size: 2vh;
+}
 #form-button{
     background-color: #89d3e2;
     font-family: Bahnschrift;

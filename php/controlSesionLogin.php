@@ -10,6 +10,10 @@ function verificacion(){
 
     $qu =("SELECT * FROM usuarios WHERE usuario='".$_POST['usuario']."' AND contrasena ='".$_POST['contrasena']."'");
     $Users = $mysql->query($qu);
+    $id_button = mysqli_fetch_assoc($Users);
+    $id_pass = $id_button['nombre'];
+
+    $sing_true = $id_button .'?sign_in=true';
     if(mysqli_num_rows($Admins)!=0){
     if(mysqli_num_rows($Admins)!=0){
 		session_start();
@@ -22,10 +26,10 @@ function verificacion(){
     if(isset($_SESSION['authadm']) && ($_SESSION['authadm']==true)){
         print("existe");
         header("Location:administrador.php");
-        }else{
+        }/*else{
             print("no existe");
-            header("Location:login.php?error=true");
-        }
+            header("Location:$id_button?sign_in=true");
+        }*/
     }else{
 
     if(mysqli_num_rows($Users)!=0){
@@ -39,10 +43,10 @@ function verificacion(){
 
     if(isset($_SESSION['authuse']) && ($_SESSION['authuse']==true)){
             print("existe");
-            header("Location:../index.php?sign_in=true");
+            header('Location:index.php?sign_in=true&id='.$id_pass);
             }else{
                 print("no existe");
-                header("Location:login.php?error=true");
+                header("Location:index.php?error=true");
             }
         }
 
