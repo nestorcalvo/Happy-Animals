@@ -11,7 +11,7 @@
 <body>
     <h2>Datos personales</h2>
     <div class="form">
-        <form action="php/form2.php" method="post" id="adopt_animals" >
+        <form action="form2.php" method="post" id="adopt_animals" >
             <br>
             <label>Nombre: </label>
             <input type="text" name="nombre" placeholder="Nombre" required>
@@ -53,7 +53,7 @@
         <br>
         <br>
         <br>
-        <a href="index.html">
+        <a href="index.php">
             <input type="button" value="Volver">
         </a>
     </div>

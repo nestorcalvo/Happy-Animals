@@ -74,5 +74,5 @@
         echo "Hubo error al ejectuar la cola";
     }
     else{
-        echo "Datos almacenados correctamente <br><a href='../index.html'><input type='button' value='volver'></a>";
+        echo "Datos almacenados correctamente <br><a href='index.php'><input type='button' value='volver'></a>";
     }

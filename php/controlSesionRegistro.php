@@ -34,7 +34,7 @@ function ingreso(){
         header("Location:registro.php?error=true?");
 
     }else{
-        header("Location:index.html");
+        header("Location:index.php");
         session_destroy();
     }
 }else{

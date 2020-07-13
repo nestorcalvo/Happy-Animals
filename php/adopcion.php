@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Happy Animals - Care Center</title>
 
-    <link rel="stylesheet" type="text/css" href="css/style4.css">
+    <link rel="stylesheet" type="text/css" href="../css/style4.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -18,10 +18,10 @@
             <a href="#"><h4 class="d-block1 w-100">Donate now</h4></a>                        
           </div>
           <div class="carousel-item">
-            <a href="php/formVoluntario.php"><h4 class="d-block1 w-100">Volunteer</h4></a>
+            <a href="formVoluntario.php"><h4 class="d-block1 w-100">Volunteer</h4></a>
           </div>
           <div class="carousel-item">
-            <a href="php/adopt-a-pet.php"><h4 class="d-block1 w-100">Adopt</h4></a>
+            <a href="adopt-a-pet.php"><h4 class="d-block1 w-100">Adopt</h4></a>
           </div>
         </div>
     </div>
@@ -29,7 +29,7 @@
     <div class="navbar fixed">
 
         <div class="col-lg-6 col-md-12 logo">
-            <a href="index.html" class="navbar-brand"><img class="logo" src="img/completelogo.PNG" alt="HappyAnimals"></a>          
+            <a href="index.php" class="navbar-brand"><img class="logo" src="../img/completelogo.PNG" alt="HappyAnimals"></a>
         </div>
 
         <div class="col-lg-2 col-md-12">
@@ -39,9 +39,9 @@
         <div class="col-lg-4 col-md-12">            
  
             <div class="multi-button">
-                <button><img class="icon" src="img/gatos.png" alt="cats"></button>
-                <button><img class="icon" src="img/perro.png" alt="dogs"></button>
-                <button><img class="icon" src="img/conejo.png" alt="bunnies"></button>
+                <button><img class="icon" src="../img/gatos.png" alt="cats"></button>
+                <button><img class="icon" src="../img/perro.png" alt="dogs"></button>
+                <button><img class="icon" src="../img/conejo.png" alt="bunnies"></button>
             </div>
 
         </div>        
@@ -50,10 +50,10 @@
     <nav>
         <ul class="nav-list">
             <input type="button" value="🞬" id="nav-button" onclick="change()">
-            <li class="nav-item"><a href="php/adopt-a-pet.php" class="nav-link">Adopt a pet</a></li>
-            <li class="nav-item"><a href="adopcion.html" class="nav-link">Give up for adoption</a></li>
-            <li class="nav-item"><a href="mapa.html" class="nav-link">Low-cost vet clinics</a></li>
-            <li class="nav-item"><a href="php/formVoluntario.php" class="nav-link">Volunteer</a></li>
+            <li class="nav-item"><a href="adopt-a-pet.php" class="nav-link">Adopt a pet</a></li>
+            <li class="nav-item"><a href="adopcion.php" class="nav-link">Give up for adoption</a></li>
+            <li class="nav-item"><a href="mapa.php" class="nav-link">Low-cost vet clinics</a></li>
+            <li class="nav-item"><a href="formVoluntario.php" class="nav-link">Volunteer</a></li>
             <li class="nav-item"><a href="#" class="nav-link" data-toggle="modal" data-target="#modal_info1">Sign in</a></li>
         </ul>
 
@@ -66,7 +66,7 @@
                     </div>
     
                     <div class="modal-body">
-                        <form method="post" action="php/controlSesionLogin.php">
+                        <form method="post" action="controlSesionLogin.php">
                             <div class="form-group">
                                 <label class="label-title">Nickname</label>
                                 <input class="form-control form-control-sm" type="text" name="usuario" required>
@@ -78,11 +78,11 @@
 
                             <button class="btn btn-block" id="form-button" type="submit">Sing in</button><br>
 
-                            <a href="php/recuperarcontrasena.php" class="form-title">Forgot your password?</a><br>
+                            <a href="recuperarcontrasena.php" class="form-title">Forgot your password?</a><br>
 
-                            <a href="php/registro.php" class="form-title">Not registered yet? Sign up!</a>
+                            <a href="registro.php" class="form-title">Not registered yet? Sign up!</a>
 
-                            <img src="img/logo.png" alt="logo" class="logo1">
+                            <img src="../img/logo.png" alt="logo" class="logo1">
                         </form>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
     <div class="position">
         <p class="position">Home / Give up for adoption</p>
         <h3 class="position">Give up for adoption</h3>
-        <img class="position" src="img/paw.png" alt="">
+        <img class="position" src="../img/paw.png" alt="">
     </div>
 
     <div class="row">
@@ -101,7 +101,7 @@
             <div class="form">
             <h2 class="giveup">Personal Information</h2>
             
-                <form action="php/form1.php" method="post" id="animals" enctype="multipart/form-data">
+                <form action="form1.php" method="post" id="animals" enctype="multipart/form-data">
                     <br>
                     <label>Name</label><br>
                     <input type="text" name="nombre" id="nombre" required>
@@ -188,7 +188,7 @@
 
                     <input type="submit" id="submit_button" value="Send">
             </form>
-            <a href="index.html">
+            <a href="index.php">
                 <input type="button" value="Back to Homepage">
             </a>
         </div>
@@ -203,28 +203,28 @@
         <div class="row">
             <div class="col-lg-3 col-md-12">
                 <a href="" class="second-menu"><div class="second-menu-h">
-                    <img class="second-menu" src="img/paw.png" alt="HappyAnimals">
+                    <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
                     <h3 class="second-menu">Adopt</h3>
                     <p class="second-menu">Save a life today and add someone special to your family</p>
                 </div></a>
             </div>
             <div class="col-lg-3 col-md-12">
                 <a href="" class="second-menu"><div class="second-menu-h">
-                    <img class="second-menu" src="img/paw.png" alt="HappyAnimals">
+                    <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
                     <h3 class="second-menu">Donate</h3>
                     <p class="second-menu">Help give animals the life they deserve</p>
                 </div></a>
             </div>
             <div class="col-lg-3 col-md-12">
-                <a href="mapa.html" class="second-menu"><div class="second-menu-h">
-                    <img class="second-menu" src="img/paw.png" alt="HappyAnimals">
+                <a href="mapa.php" class="second-menu"><div class="second-menu-h">
+                    <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
                     <h3 class="second-menu">Low-Cost Clinics</h3>
                     <p class="second-menu">Find directions here</p>
                 </div></a>
             </div>
             <div class="col-lg-3 col-md-12">
-                <a href="php/formVoluntario.php" class="second-menu"><div class="second-menu-h">
-                    <img class="second-menu" src="img/paw.png" alt="HappyAnimals">
+                <a href="formVoluntario.php" class="second-menu"><div class="second-menu-h">
+                    <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
                     <h3 class="second-menu">Volunteer</h3>
                     <p class="second-menu">Help at the shelter or foster some furry friends</p>
                 </div></a>
@@ -238,23 +238,23 @@
                 <h6 class="cu">Contact Us</h6>
                              
                 <ul class="cu">
-                    <li class="cu"><img class="cu" src="img/telefono.png" alt="phone">+57 123 456 7890</li>
-                    <li class="cu"><img class="cu" src="img/correo-electronico.png" alt="email">happyanimals@foundation.com</li>
-                    <li class="cu"><img class="cu" src="img/alfiler.png" alt="map">744 Evergreen Terrace - Medellín, Antioquia</li>
+                    <li class="cu"><img class="cu" src="../img/telefono.png" alt="phone">+57 123 456 7890</li>
+                    <li class="cu"><img class="cu" src="../img/correo-electronico.png" alt="email">happyanimals@foundation.com</li>
+                    <li class="cu"><img class="cu" src="../img/alfiler.png" alt="map">744 Evergreen Terrace - Medellín, Antioquia</li>
                 </ul>
             </div>
 
             <div class="col-lg-4 col-md-12">
                 <h3 class="ficon">Follow Us!</h3>
                 <div class="social">
-                    <a href="#" class="ficon"><img class="icon-footer" src="img/instagram-sketched.png" alt="ig"></a>
-                    <a href="#" class="ficon"><img class="icon-footer" src="img/facebook.png" alt="fb"></a>
-                    <a href="#" class="ficon"><img class="icon-footer" src="img/twitter.png" alt="tl"></a>
-                    <a href="#" class="ficon"><img class="icon-footer" src="img/yt.png" alt="yt"></a>
+                    <a href="#" class="ficon"><img class="icon-footer" src="../img/instagram-sketched.png" alt="ig"></a>
+                    <a href="#" class="ficon"><img class="icon-footer" src="../img/facebook.png" alt="fb"></a>
+                    <a href="#" class="ficon"><img class="icon-footer" src="../img/twitter.png" alt="tl"></a>
+                    <a href="#" class="ficon"><img class="icon-footer" src="../img/yt.png" alt="yt"></a>
                 </div>
 
-                <img class="img-footer" src="img/logo.png" alt="Happy Animals">
-                <img  src="img/logo1.png" alt="Happy Animals">
+                <img class="img-footer" src="../img/logo.png" alt="Happy Animals">
+                <img src="../img/logo1.png" alt="Happy Animals">
             </div>
 
             <div class="col-lg-4 col-md-12">

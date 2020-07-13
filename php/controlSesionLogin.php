@@ -39,7 +39,7 @@ function verificacion(){
 
     if(isset($_SESSION['authuse']) && ($_SESSION['authuse']==true)){
             print("existe");
-            header("Location:../index.html?sign_in=true");
+            header("Location:../index.php?sign_in=true");
             }else{
                 print("no existe");
                 header("Location:login.php?error=true");

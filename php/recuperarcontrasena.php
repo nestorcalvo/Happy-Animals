@@ -31,7 +31,7 @@
 <div class="navbar fixed">
 
     <div class="col-lg-6 col-md-12 logo">
-        <a href="../index.html" class="navbar-brand"><img class="logo" src="../img/completelogo.PNG" alt="HappyAnimals"></a>
+        <a href="index.php" class="navbar-brand"><img class="logo" src="../img/completelogo.PNG" alt="HappyAnimals"></a>
     </div>
 
     <div class="col-lg-2 col-md-12">
@@ -53,8 +53,8 @@
     <ul class="nav-list">
         <input type="button" value="🞬" id="nav-button" onclick="change()">
         <li class="nav-item"><a href="../php/adopt-a-pet.php" class="nav-link">Adopt a pet</a></li>
-        <li class="nav-item"><a href="../adopcion.html" class="nav-link">Give up for adoption</a></li>
-        <li class="nav-item"><a href="../mapa.html" class="nav-link">Low-cost vet clinics</a></li>
+        <li class="nav-item"><a href="adopcion.php" class="nav-link">Give up for adoption</a></li>
+        <li class="nav-item"><a href="mapa.php" class="nav-link">Low-cost vet clinics</a></li>
         <li class="nav-item"><a href="../php/formVoluntario.php" class="nav-link">Volunteer</a></li>
         <li class="nav-item"><a href="#" class="nav-link" data-toggle="modal" data-target="#modal_info1">Sign in</a></li>
     </ul>
@@ -206,7 +206,7 @@ if(isset($_POST['recuperar'])){
                 </div></a>
         </div>
         <div class="col-lg-3 col-md-12">
-            <a href="../mapa.html" class="second-menu"><div class="second-menu-h">
+            <a href="mapa.php" class="second-menu"><div class="second-menu-h">
                     <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
                     <h3 class="second-menu">Low-Cost Clinics</h3>
                     <p class="second-menu">Find directions here</p>
