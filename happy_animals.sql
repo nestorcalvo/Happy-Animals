@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-07-2020 a las 05:18:10
--- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.4.6
+-- Tiempo de generación: 11-07-2020 a las 06:39:27
+-- Versión del servidor: 10.4.13-MariaDB
+-- Versión de PHP: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -90,6 +90,8 @@ CREATE TABLE `dar_adopcion` (
   `sexo` text NOT NULL,
   `tamaño` text NOT NULL,
   `peso` int(5) NOT NULL,
+  `color` text NOT NULL,
+  `direccion` text NOT NULL,
   `vacunado` text NOT NULL,
   `desparacitado` text NOT NULL,
   `sano` text NOT NULL,
@@ -102,13 +104,13 @@ CREATE TABLE `dar_adopcion` (
 -- Volcado de datos para la tabla `dar_adopcion`
 --
 
-INSERT INTO `dar_adopcion` (`id`, `nombre`, `correo`, `tel`, `tiempo`, `razón`, `nombre_animal`, `especie`, `nacimiento_animal`, `sexo`, `tamaño`, `peso`, `vacunado`, `desparacitado`, `sano`, `microchip`, `revisado`, `img_animal`) VALUES
-(1, 'Nestor', 'nestorcalvoa@gmail.com', 12, 1, 'pa', 'SA', 'Perro', '2020-06-15', 'Masculino', 'Pequeño', 2, 'si', 'no', 'si', 'no', 'si', NULL),
-(2, 'Hola', 'hola@gmail.co', 215452, 2, 'Porque si', 'Perrito', 'Gato', '2020-06-24', 'Femenino', 'Mediano', 20, 'si', 'si', 'si', 'si', 'no', NULL),
-(3, 'Hola', 'hola@gmail.com', 123123, 2, 'pa', 'Gatito', 'Gato', '2020-06-09', 'Femenino', 'Mediano', 21, 'si', 'si', 'si', 'si', 'no', NULL),
-(4, 'Caja', 'caja@gmail.com', 25215, 12, 'Ya no lo quiero', 'Gatito', 'Conejo', '2020-06-02', 'Femenino', 'Grande', 233, 'no', 'no', 'no', 'no', 'no', NULL),
-(12, 'as', 'as@asa', 1212, 1, 'asas', 'asas', 'Perro', '1111-11-11', 'Masculino', 'Pequeño', 1, 'si', 'no', 'no', 'no', 'no', ''),
-(13, 'ass', 'as@asa', 12221, 21, 'Siempre quise uno', 'dsad', 'Perro', '1121-01-22', 'Masculino', 'Pequeño', 3, 'no', 'si', 'no', 'no', 'si', '');
+INSERT INTO `dar_adopcion` (`id`, `nombre`, `correo`, `tel`, `tiempo`, `razón`, `nombre_animal`, `especie`, `nacimiento_animal`, `sexo`, `tamaño`, `peso`, `color`, `direccion`, `vacunado`, `desparacitado`, `sano`, `microchip`, `revisado`, `img_animal`) VALUES
+(1, 'Nestor', 'nestorcalvoa@gmail.com', 12, 1, 'pa', 'SA', 'Perro', '2020-06-15', 'Masculino', 'Pequeño', 2, 'cafe', 'Av. 40 #51-110, Barrio Niquía', 'si', 'no', 'si', 'no', 'si', NULL),
+(2, 'Hola', 'hola@gmail.co', 215452, 2, 'Porque si', 'Perrito', 'Gato', '2020-06-24', 'Femenino', 'Mediano', 20, '', '', 'si', 'si', 'si', 'si', 'no', NULL),
+(3, 'Hola', 'hola@gmail.com', 123123, 2, 'pa', 'Gatito', 'Gato', '2020-06-09', 'Femenino', 'Mediano', 21, '', '', 'si', 'si', 'si', 'si', 'no', NULL),
+(4, 'Caja', 'caja@gmail.com', 25215, 12, 'Ya no lo quiero', 'Gatito', 'Conejo', '2020-06-02', 'Femenino', 'Grande', 233, '', '', 'no', 'no', 'no', 'no', 'no', NULL),
+(12, 'as', 'as@asa', 1212, 1, 'asas', 'asas', 'Perro', '1111-11-11', 'Masculino', 'Pequeño', 1, '', '', 'si', 'no', 'no', 'no', 'no', ''),
+(13, 'ass', 'as@asa', 12221, 21, 'Siempre quise uno', 'dsad', 'Perro', '1121-01-22', 'Masculino', 'Pequeño', 3, '', '', 'no', 'si', 'no', 'no', 'si', '');
 
 -- --------------------------------------------------------
 
