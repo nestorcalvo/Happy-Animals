@@ -1,5 +1,5 @@
 <?php 
-require_once"../php/conexionBDL.php";
+require_once"conexionBDL.php";
 
 verificacion();
 function verificacion(){
@@ -39,7 +39,7 @@ function verificacion(){
 
     if(isset($_SESSION['authuse']) && ($_SESSION['authuse']==true)){
             print("existe");
-            header("Location:home2.php");
+            header("Location:../index.html?sign_in=true");
             }else{
                 print("no existe");
                 header("Location:login.php?error=true");

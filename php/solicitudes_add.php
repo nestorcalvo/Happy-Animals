@@ -7,10 +7,10 @@
 </head>
 <body>
     <ul>
-        <li><a href="../php//voluntarios_add.php">Voluntarios</a></li>
-        <li><a class="active" href="../php/solicitudes_add.php">Solicitudes adopción</a></li>
+        <li><a href="../php/voluntarios_add.php">Voluntarios</a></li>
+        <li><a href="../php/solicitudes_add.php">Solicitudes para dar en adopción</a></li>
         <li><a href="../php/adopcion_acept.php">Solicitudes adopción</a></li>
-        <li style="float:right"><a href="../index.html" id="close_sesion">Cerrar sesion</a></li>
+        <li style="float:right"><a class="active" href="../index.html" id="close_sesion">Cerrar sesion</a></li>
     </ul>
     <br>
     <table border = '2'>
