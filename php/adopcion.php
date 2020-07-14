@@ -49,45 +49,104 @@
 
     <nav>
         <ul class="nav-list">
-            <input type="button" value="🞬" id="nav-button" onclick="change()">
-            <li class="nav-item"><a href="adopt-a-pet.php" class="nav-link">Adopt a pet</a></li>
-            <li class="nav-item"><a href="adopcion.php" class="nav-link">Give up for adoption</a></li>
-            <li class="nav-item"><a href="mapa.php" class="nav-link">Low-cost vet clinics</a></li>
-            <li class="nav-item"><a href="formVoluntario.php" class="nav-link">Volunteer</a></li>
-            <li class="nav-item"><a href="#" class="nav-link" data-toggle="modal" data-target="#modal_info1">Sign in</a></li>
+            <?php
+            if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
+                $id = $_GET['id'];
+                ?>
+                <li class="nav-item"><a href="adopt-a-pet.php?sign_in=true&id=<?php echo $id?>" class="nav-link">Adopt a pet</a></li>
+                <li class="nav-item"><a href="adopcion.php?sign_in=true&id=<?php echo $id?>" class="nav-link">Give up for adoption</a></li>
+                <li class="nav-item"><a href="mapa.php?sign_in=true&id=<?php echo $id?>" class="nav-link">Low-cost vet clinics</a></li>
+                <li class="nav-item"><a href="formVoluntario.php?sign_in=true&id=<?php echo $id?>" class="nav-link">Volunteer</a></li>
+                <li class="nav-item"><a href="index.php" class="nav-link" ><?php echo $_GET['id'] ?></a></li>
+                <?php
+            }else{
+                ?>
+                <li class="nav-item"><a href="adopt-a-pet.php" class="nav-link">Adopt a pet</a></li>
+                <li class="nav-item"><a href="adopcion.php" class="nav-link">Give up for adoption</a></li>
+                <li class="nav-item"><a href="mapa.php" class="nav-link">Low-cost vet clinics</a></li>
+                <li class="nav-item"><a href="formVoluntario.php" class="nav-link">Volunteer</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-toggle="modal" data-target="#modal_info1">Sign in</a></li>
+                <?php
+            }
+            ?>
         </ul>
 
-        <div class="modal fade" id="modal_info1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title w-100">Sign in</h4>
-                        <button class="close" data-dismiss="modal">&times;</button>
-                    </div>
-    
-                    <div class="modal-body">
-                        <form method="post" action="controlSesionLogin.php">
-                            <div class="form-group">
-                                <label class="label-title">Nickname</label>
-                                <input class="form-control form-control-sm" type="text" name="usuario" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="label-title">Password	</label>
-                                <input class="form-control form-control-sm" type="password" name="contrasena" size="6" maxlength="10" required>
-                            </div>
+        <?php
 
-                            <button class="btn btn-block" id="form-button" type="submit">Sing in</button><br>
+        if (isset($_GET['error']) && $_GET['error'] == true) {
 
-                            <a href="recuperarcontrasena.php" class="form-title">Forgot your password?</a><br>
+            ?>
+            <div class="modal fade" id="modal_info1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title w-100">Sign in</h4>
+                            <button class="close" data-dismiss="modal">&times;</button>
+                        </div>
 
-                            <a href="registro.php" class="form-title">Not registered yet? Sign up!</a>
+                        <div class="modal-body">
+                            <form  method="post" action="controlSesionLogin.php">
+                                <div class="form-group">
+                                    <h2>Usuario o contraseña incorrectos</h2>
+                                </div>
+                                <div class="form-group">
+                                    <label class="label-title">Nickname</label>
+                                    <input class="form-control form-control-sm" type="text" name="usuario" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="label-title">Password	</label><input class="form-control form-control-sm" type="password" name="contrasena" size="6" maxlength="10" required>
+                                </div>
 
-                            <img src="../img/logo.png" alt="logo" class="logo1">
-                        </form>
+                                <button class="btn btn-block" id="form-button" name="index" type="submit">Sing in</button><br>
+
+                                <a href="recuperarcontrasena.php" class="form-title">Forgot your password?</a><br>
+
+                                <a href="registro.php" class="form-title">Not registered yet? Sign up!</a>
+
+                                <img src="../img/logo.png" alt="logo" class="logo1">
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <?php
+        }else{
+
+            ?>
+            <div class="modal fade" id="modal_info1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title w-100">Sign in</h4>
+                            <button class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body">
+                            <form  method="post" action="controlSesionLogin.php">
+
+                                <div class="form-group">
+                                    <label class="label-title">Nickname</label>
+                                    <input class="form-control form-control-sm" type="text" name="usuario" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="label-title">Password	</label><input class="form-control form-control-sm" type="password" name="contrasena" size="6" maxlength="10" required>
+                                </div>
+
+                                <button class="btn btn-block" id="form-button" name="index" type="submit">Sing in</button><br>
+
+                                <a href="recuperarcontrasena.php" class="form-title">Forgot your password?</a><br>
+
+                                <a href="registro.php" class="form-title">Not registered yet? Sign up!</a>
+
+                                <img src="../img/logo.png" alt="logo" class="logo1">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php
+        }
+        ?>
     </nav>
 
     <div class="position">

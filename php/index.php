@@ -19,25 +19,60 @@
 <body>   
     
     <div id="carousel" class="carousel slide" data-ride="carousel">
+
+        <?php
+        if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
+        $id = $_GET['id'];
+        ?>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="#"><h4 class="d-block1 w-100">Donate now</h4></a>
+            </div>
+            <div class="carousel-item">
+                <a href="formVoluntario.php?sign_in=true&id=<?php echo $id?>"><h4 class="d-block1 w-100">Volunteer</h4></a>
+
+            </div>
+            <div class="carousel-item">
+                <a href="adopt-a-pet.php?sign_in=true&id=<?php echo $id?>"><h4 class="d-block1 w-100">Adopt</h4></a>
+            </div>
+        </div>
+
+        <?php
+        }else{
+        ?>
         <div class="carousel-inner">
           <div class="carousel-item active">
             <a href="#"><h4 class="d-block1 w-100">Donate now</h4></a>                        
           </div>
           <div class="carousel-item">
-            <a href="formVoluntario.php"><h4 class="d-block1 w-100">Volunteer</h4></a>
+              <a href="formVoluntario.php"><h4 class="d-block1 w-100">Volunteer</h4></a>
           </div>
           <div class="carousel-item">
             <a href="adopt-a-pet.php"><h4 class="d-block1 w-100">Adopt</h4></a>
           </div>
         </div>
+        <?php
+        }
+        ?>
     </div>
 
     <div class="navbar fixed">
-
-        <div class="col-lg-6 col-md-12 logo">
-            <a href="index.php" class="navbar-brand"><img class="logo" src="../img/completelogo.PNG" alt="HappyAnimals"></a>
-        </div>
-
+        <?php
+        if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
+        $id = $_GET['id'];
+        ?>
+            <div class="col-lg-6 col-md-12 logo">
+                <a href="index.php?sign_in=true&id=<?php echo $id?>" class="navbar-brand"><img class="logo" src="../img/completelogo.PNG" alt="HappyAnimals"></a>
+            </div>
+        <?php
+        }else{
+        ?>
+            <div class="col-lg-6 col-md-12 logo">
+                <a href="index.php" class="navbar-brand"><img class="logo" src="../img/completelogo.PNG" alt="HappyAnimals"></a>
+            </div>
+        <?php
+        }
+        ?>
         <div class="col-lg-2 col-md-12">
             <h3 class="nav-title">ADOPT : </h3>
         </div>
@@ -56,17 +91,23 @@
     <nav>
         <ul class="nav-list">
             <input type="button" value="🞬" id="nav-button" onclick="change()">
-            <li class="nav-item"><a href="adopt-a-pet.php" class="nav-link">Adopt a pet</a></li>
-            <li class="nav-item"><a href="adopcion.php" class="nav-link">Give up for adoption</a></li>
-            <li class="nav-item"><a href="mapa.php" class="nav-link">Low-cost vet clinics</a></li>
-            <li class="nav-item"><a href="formVoluntario.php" class="nav-link">Volunteer</a></li>
+
             <?php
                 if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
+                    $id = $_GET['id'];
             ?>
+            <li class="nav-item"><a href="adopt-a-pet.php?sign_in=true&id=<?php echo $id?>" class="nav-link">Adopt a pet</a></li>
+            <li class="nav-item"><a href="adopcion.php?sign_in=true&id=<?php echo $id?>" class="nav-link">Give up for adoption</a></li>
+            <li class="nav-item"><a href="mapa.php?sign_in=true&id=<?php echo $id?>" class="nav-link">Low-cost vet clinics</a></li>
+            <li class="nav-item"><a href="formVoluntario.php?sign_in=true&id=<?php echo $id?>" class="nav-link">Volunteer</a></li>
             <li class="nav-item"><a href="index.php" class="nav-link" ><?php echo $_GET['id'] ?></a></li>
             <?php
                 }else{
             ?>
+            <li class="nav-item"><a href="adopt-a-pet.php" class="nav-link">Adopt a pet</a></li>
+            <li class="nav-item"><a href="adopcion.php" class="nav-link">Give up for adoption</a></li>
+            <li class="nav-item"><a href="mapa.php" class="nav-link">Low-cost vet clinics</a></li>
+            <li class="nav-item"><a href="formVoluntario.php" class="nav-link">Volunteer</a></li>
             <li class="nav-item"><a href="#" class="nav-link" data-toggle="modal" data-target="#modal_info1">Sign in</a></li>
             <?php
                 }
@@ -152,13 +193,28 @@
 
 
 
-
-        <div>
-            <img src="../img/dog5.jpg" alt="dog" class="bg1">
-            <h2 class="bg1">Become a <br> Lifesaver</h2><br>
-            <h3 class="bg1">Rescue a pet</h3>
-            <a href="adopt-a-pet.php"><button class="bg1">ADOPT NOW</button></a>
-        </div>
+        <?php
+        if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
+        $id = $_GET['id'];
+        ?>
+            <div>
+                <img src="../img/dog5.jpg" alt="dog" class="bg1">
+                <h2 class="bg1">Become a <br> Lifesaver</h2><br>
+                <h3 class="bg1">Rescue a pet</h3>
+                <a href="adopt-a-pet.php?sign_in=true&id=<?php echo $id?>"><button class="bg1">ADOPT NOW</button></a>
+            </div>
+        <?php
+        }else{
+        ?>
+            <div>
+                <img src="../img/dog5.jpg" alt="dog" class="bg1">
+                <h2 class="bg1">Become a <br> Lifesaver</h2><br>
+                <h3 class="bg1">Rescue a pet</h3>
+                <a href="adopt-a-pet.php"><button class="bg1">ADOPT NOW</button></a>
+            </div>
+        <?php
+        }
+        ?>
     </nav>
 
     <div class="row mrg">
