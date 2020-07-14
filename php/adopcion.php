@@ -12,39 +12,75 @@
 </head>
 <body>
 
+
     <div id="carousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <a href="#"><h4 class="d-block1 w-100">Donate now</h4></a>                        
-          </div>
-          <div class="carousel-item">
-            <a href="formVoluntario.php"><h4 class="d-block1 w-100">Volunteer</h4></a>
-          </div>
-          <div class="carousel-item">
-            <a href="adopt-a-pet.php"><h4 class="d-block1 w-100">Adopt</h4></a>
-          </div>
-        </div>
+
+        <?php
+        if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
+            $id = $_GET['id'];
+            ?>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="#"><h4 class="d-block1 w-100">Donate now</h4></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="formVoluntario.php?sign_in=true&id=<?php echo $id?>"><h4 class="d-block1 w-100">Volunteer</h4></a>
+
+                </div>
+                <div class="carousel-item">
+                    <a href="adopt-a-pet.php?sign_in=true&id=<?php echo $id?>"><h4 class="d-block1 w-100">Adopt</h4></a>
+                </div>
+            </div>
+
+            <?php
+        }else{
+            ?>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="#"><h4 class="d-block1 w-100">Donate now</h4></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="formVoluntario.php"><h4 class="d-block1 w-100">Volunteer</h4></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="adopt-a-pet.php"><h4 class="d-block1 w-100">Adopt</h4></a>
+                </div>
+            </div>
+            <?php
+        }
+        ?>
     </div>
 
     <div class="navbar fixed">
-
-        <div class="col-lg-6 col-md-12 logo">
-            <a href="index.php" class="navbar-brand"><img class="logo" src="../img/completelogo.PNG" alt="HappyAnimals"></a>
-        </div>
-
+        <?php
+        if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
+            $id = $_GET['id'];
+            ?>
+            <div class="col-lg-6 col-md-12 logo">
+                <a href="index.php?sign_in=true&id=<?php echo $id?>" class="navbar-brand"><img class="logo" src="../img/completelogo.PNG" alt="HappyAnimals"></a>
+            </div>
+            <?php
+        }else{
+            ?>
+            <div class="col-lg-6 col-md-12 logo">
+                <a href="index.php" class="navbar-brand"><img class="logo" src="../img/completelogo.PNG" alt="HappyAnimals"></a>
+            </div>
+            <?php
+        }
+        ?>
         <div class="col-lg-2 col-md-12">
             <h3 class="nav-title">ADOPT : </h3>
         </div>
 
-        <div class="col-lg-4 col-md-12">            
- 
+        <div class="col-lg-4 col-md-12">
+
             <div class="multi-button">
                 <button><img class="icon" src="../img/gatos.png" alt="cats"></button>
                 <button><img class="icon" src="../img/perro.png" alt="dogs"></button>
                 <button><img class="icon" src="../img/conejo.png" alt="bunnies"></button>
             </div>
 
-        </div>        
+        </div>
     </div>
 
     <nav>
@@ -256,40 +292,82 @@
         <br>
         </div>
 
-    </div>            
-
-    <div class="second-menu">
-        <div class="row">
-            <div class="col-lg-3 col-md-12">
-                <a href="" class="second-menu"><div class="second-menu-h">
-                    <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
-                    <h3 class="second-menu">Adopt</h3>
-                    <p class="second-menu">Save a life today and add someone special to your family</p>
-                </div></a>
-            </div>
-            <div class="col-lg-3 col-md-12">
-                <a href="" class="second-menu"><div class="second-menu-h">
-                    <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
-                    <h3 class="second-menu">Donate</h3>
-                    <p class="second-menu">Help give animals the life they deserve</p>
-                </div></a>
-            </div>
-            <div class="col-lg-3 col-md-12">
-                <a href="mapa.php" class="second-menu"><div class="second-menu-h">
-                    <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
-                    <h3 class="second-menu">Low-Cost Clinics</h3>
-                    <p class="second-menu">Find directions here</p>
-                </div></a>
-            </div>
-            <div class="col-lg-3 col-md-12">
-                <a href="formVoluntario.php" class="second-menu"><div class="second-menu-h">
-                    <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
-                    <h3 class="second-menu">Volunteer</h3>
-                    <p class="second-menu">Help at the shelter or foster some furry friends</p>
-                </div></a>
-            </div>
-        </div> 
     </div>
+
+    <?php
+    if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
+        $id = $_GET['id'];
+        ?>
+        <div class="second-menu">
+            <div class="row">
+                <div class="col-lg-3 col-md-12">
+                    <a href="adopt-a-pet.php?sign_in=true&id=<?php echo $id?>" class="second-menu"><div class="second-menu-h">
+                            <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
+                            <h3 class="second-menu">Adopt</h3>
+                            <p class="second-menu">Save a life today and add someone special to your family</p>
+                        </div></a>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <a href="" class="second-menu"><div class="second-menu-h">
+                            <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
+                            <h3 class="second-menu">Donate</h3>
+                            <p class="second-menu">Help give animals the life they deserve</p>
+                        </div></a>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <a href="mapa.php?sign_in=true&id=<?php echo $id?>" class="second-menu"><div class="second-menu-h">
+                            <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
+                            <h3 class="second-menu">Low-Cost Clinics</h3>
+                            <p class="second-menu">Find directions here</p>
+                        </div></a>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <a href="formVoluntario.php?sign_in=true&id=<?php echo $id?>" class="second-menu"><div class="second-menu-h">
+                            <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
+                            <h3 class="second-menu">Volunteer</h3>
+                            <p class="second-menu">Help at the shelter or foster some furry friends</p>
+                        </div></a>
+                </div>
+            </div>
+        </div>
+        <?php
+    }else{
+        ?>
+        <div class="second-menu">
+            <div class="row">
+                <div class="col-lg-3 col-md-12">
+                    <a href="adopt-a-pet.php" class="second-menu"><div class="second-menu-h">
+                            <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
+                            <h3 class="second-menu">Adopt</h3>
+                            <p class="second-menu">Save a life today and add someone special to your family</p>
+                        </div></a>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <a href="" class="second-menu"><div class="second-menu-h">
+                            <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
+                            <h3 class="second-menu">Donate</h3>
+                            <p class="second-menu">Help give animals the life they deserve</p>
+                        </div></a>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <a href="mapa.php" class="second-menu"><div class="second-menu-h">
+                            <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
+                            <h3 class="second-menu">Low-Cost Clinics</h3>
+                            <p class="second-menu">Find directions here</p>
+                        </div></a>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <a href="voluntarios.php" class="second-menu"><div class="second-menu-h">
+                            <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
+                            <h3 class="second-menu">Volunteer</h3>
+                            <p class="second-menu">Help at the shelter or foster some furry friends</p>
+                        </div></a>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+    ?>
 
     <footer>
         <div class="row mrg">
