@@ -80,9 +80,9 @@ session_start();
         <div class="col-lg-4 col-md-12">
 
             <div class="multi-button">
-                <button><img class="icon" src="../img/gatos.png" alt="cats"></button>
-                <button><img class="icon" src="../img/perro.png" alt="dogs"></button>
-                <button><img class="icon" src="../img/conejo.png" alt="bunnies"></button>
+                <a href="adopt-a-pet.php?search=cats" ><button><img class="icon" src="../img/gatos.png" alt="cats"></button></a>
+                <a href="adopt-a-pet.php?search=dogs" ><button><img class="icon" src="../img/perro.png" alt="dogs"></button></a>
+                <a href="adopt-a-pet.php?search=bunny" ><button><img class="icon" src="../img/conejo.png" alt="bunnies"></button></a>
             </div>
 
         </div>

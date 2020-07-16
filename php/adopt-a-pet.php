@@ -79,9 +79,9 @@
             <div class="col-lg-4 col-md-12">
 
                 <div class="multi-button">
-                    <button><img class="icon" src="../img/gatos.png" alt="cats"></button>
-                    <button><img class="icon" src="../img/perro.png" alt="dogs"></button>
-                    <button><img class="icon" src="../img/conejo.png" alt="bunnies"></button>
+                    <a href="adopt-a-pet.php?search=cats" ><button><img class="icon" src="../img/gatos.png" alt="cats"></button></a>
+                    <a href="adopt-a-pet.php?search=dogs" ><button><img class="icon" src="../img/perro.png" alt="dogs"></button></a>
+                    <a href="adopt-a-pet.php?search=bunny" ><button><img class="icon" src="../img/conejo.png" alt="bunnies"></button></a>
                 </div>
 
             </div>
@@ -242,7 +242,24 @@
         if($conectar->connect_error){
             echo "No se pudo conectar con el server";
         }
-        $sql = "SELECT * FROM `dar_adopcion` WHERE revisado = 'si'";
+        if(isset($_GET['search'])){
+            $filter = $_GET['search'];
+        }
+        else{
+            $filter = "none";
+        }
+
+        if($filter=="cats"){
+            $sql = "SELECT * FROM `dar_adopcion` WHERE revisado = 'si' AND especie = 'Gato'";
+        }
+        elseif ($filter=="dogs"){
+            $sql = "SELECT * FROM `dar_adopcion` WHERE revisado = 'si' AND especie = 'Perro'";
+        }
+        elseif ($filter=="bunny"){
+            $sql = "SELECT * FROM `dar_adopcion` WHERE revisado = 'si' AND especie = 'Conejo'";
+        }else{
+            $sql = "SELECT * FROM `dar_adopcion` WHERE revisado = 'si'";
+        }
         $ejecutar = $conectar->query($sql);
         if(!$ejecutar){
             echo "Hubo error al ejectuar la cola";
