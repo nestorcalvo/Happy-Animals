@@ -12,6 +12,8 @@
     $tel = $_POST['tel'];
     $tiempo = $_POST['tiempo'];
     $razon = $_POST['razon'];
+    $direccion = $_POST['direccion'];
+    $color = $_POST['color'];
     $nombre_animal = $_POST['nombre_animal'];
     $especie = $_POST['especie'];
     $fecha_nacimiento = $_POST['nacimiento_animal'];
@@ -61,12 +63,12 @@
     }
 
     #sentencia
-    $sql = "INSERT INTO dar_adopcion(nombre,correo,tel,tiempo,razón,nombre_animal,especie,nacimiento_animal,sexo,tamaño,peso,vacunado,desparacitado,sano,microchip,img_animal) VALUES('$nombre',
+    $sql = "INSERT INTO dar_adopcion(nombre,correo,tel,tiempo,razón,nombre_animal,especie,nacimiento_animal,sexo,tamaño,peso,vacunado,desparacitado,sano,microchip,img_animal,color,direccion) VALUES('$nombre',
                                         '$correo',
                                         '$tel',
                                         '$tiempo',
                                         '$razon','$nombre_animal','$especie','$fecha_nacimiento','$sex','$tamaño',
-                                        '$peso','$vacunado','$desparacitado','$sano','$microchip','".$file_name."')";
+                                        '$peso','$vacunado','$desparacitado','$sano','$microchip','".$file_name."','$color','$direccion')";
 
     $ejecutar = $conectar->query($sql);
 

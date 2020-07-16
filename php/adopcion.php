@@ -74,12 +74,26 @@
 
         <div class="col-lg-4 col-md-12">
 
-            <div class="multi-button">
-                <a href="adopt-a-pet.php?search=cats" ><button><img class="icon" src="../img/gatos.png" alt="cats"></button></a>
-                <a href="adopt-a-pet.php?search=dogs" ><button><img class="icon" src="../img/perro.png" alt="dogs"></button></a>
-                <a href="adopt-a-pet.php?search=bunny" ><button><img class="icon" src="../img/conejo.png" alt="bunnies"></button></a>
-            </div>
-
+            <?php
+            if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
+                $id = $_GET['id'];
+                ?>
+                <div class="multi-button">
+                    <a href="adopt-a-pet.php?search=cats&sign_in=true&id=<?php echo $id?>" ><button><img class="icon" src="../img/gatos.png" alt="cats"></button></a>
+                    <a href="adopt-a-pet.php?search=dogs&sign_in=true&id=<?php echo $id?>" ><button><img class="icon" src="../img/perro.png" alt="dogs"></button></a>
+                    <a href="adopt-a-pet.php?search=bunny&sign_in=true&id=<?php echo $id?>" ><button><img class="icon" src="../img/conejo.png" alt="bunnies"></button></a>
+                </div>
+                <?php
+            }else{
+                ?>
+                <div class="multi-button">
+                    <a href="adopt-a-pet.php?search=cats" ><button><img class="icon" src="../img/gatos.png" alt="cats"></button></a>
+                    <a href="adopt-a-pet.php?search=dogs" ><button><img class="icon" src="../img/perro.png" alt="dogs"></button></a>
+                    <a href="adopt-a-pet.php?search=bunny" ><button><img class="icon" src="../img/conejo.png" alt="bunnies"></button></a>
+                </div>
+                <?php
+            }
+            ?>
         </div>
     </div>
 
@@ -241,6 +255,14 @@
 
                     <label>Animal's date of birth</label><br>
                     <input type="date" name="nacimiento_animal" placeholder="dd/mm/yy" required>
+                    <br><br>
+
+                    <label>Color </label><br>
+                    <input type="text" name="color" required>
+                    <br><br>
+
+                    <label>Direccion </label><br>
+                    <input type="text" name="direccion" required>
                     <br><br>
 
                     <label for="sexo">Sex </label><br>

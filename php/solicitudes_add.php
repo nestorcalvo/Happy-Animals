@@ -23,6 +23,8 @@
             <th>Tiempo</th>
             <th>Razón</th>
             <th>Nombre del animal</th>
+            <th>Color</th>
+            <th>Direccion</th>
             <th>Especie</th>
             <th>Nacimiento del animal</th>
             <th>Sexo</th>
@@ -72,6 +74,8 @@
                     echo "<td>" .  $rows['tiempo'] . "</td>" ;
                     echo "<td>" .  $rows['razón'] . "</td>" ;
                     echo "<td>" .  $rows['nombre_animal'] . "</td>" ;
+                    echo "<td>" .  $rows['color'] . "</td>" ;
+                    echo "<td>" .  $rows['direccion'] . "</td>" ;
                     echo "<td>" .  $rows['especie'] . "</td>" ;
                     echo "<td>" .  $rows['nacimiento_animal'] . "</td>" ;
                     echo "<td>" .  $rows['sexo'] . "</td>" ;

@@ -78,12 +78,26 @@
 
             <div class="col-lg-4 col-md-12">
 
-                <div class="multi-button">
-                    <a href="adopt-a-pet.php?search=cats" ><button><img class="icon" src="../img/gatos.png" alt="cats"></button></a>
-                    <a href="adopt-a-pet.php?search=dogs" ><button><img class="icon" src="../img/perro.png" alt="dogs"></button></a>
-                    <a href="adopt-a-pet.php?search=bunny" ><button><img class="icon" src="../img/conejo.png" alt="bunnies"></button></a>
-                </div>
-
+                <?php
+                if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
+                    $id = $_GET['id'];
+                    ?>
+                    <div class="multi-button">
+                        <a href="adopt-a-pet.php?search=cats&sign_in=true&id=<?php echo $id?>" ><button><img class="icon" src="../img/gatos.png" alt="cats"></button></a>
+                        <a href="adopt-a-pet.php?search=dogs&sign_in=true&id=<?php echo $id?>" ><button><img class="icon" src="../img/perro.png" alt="dogs"></button></a>
+                        <a href="adopt-a-pet.php?search=bunny&sign_in=true&id=<?php echo $id?>" ><button><img class="icon" src="../img/conejo.png" alt="bunnies"></button></a>
+                    </div>
+                    <?php
+                }else{
+                    ?>
+                    <div class="multi-button">
+                        <a href="adopt-a-pet.php?search=cats" ><button><img class="icon" src="../img/gatos.png" alt="cats"></button></a>
+                        <a href="adopt-a-pet.php?search=dogs" ><button><img class="icon" src="../img/perro.png" alt="dogs"></button></a>
+                        <a href="adopt-a-pet.php?search=bunny" ><button><img class="icon" src="../img/conejo.png" alt="bunnies"></button></a>
+                    </div>
+                    <?php
+                }
+                ?>
             </div>
         </div>
 
@@ -296,15 +310,35 @@
                         ?>
                             <div class="col-lg-4 col-md-12">
                                 <div class="card w-75 card-a" style="width: 18rem;">
+                                <?php
+                                if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
+                                $id = $_GET['id'];
+                                ?>
+                                    <a href="adopt-me.php?sign_in=true&id=<?php echo $id?>"><div class="hover-animation one" data-text="ADOPT ME"></div></a>
+                                    <div class="card-body">
+                                            <a href="adopt-me.php?sign_in=true&id=<?php echo $id?>"><div class="card-title" id="adp-title"><?php echo $pila_name[($j)+(3*$i)] ?></div></a>
+                                            <p class="card-text">
+                                            <div class="gender"><?php echo $pila_gender[($j)+(3*$i)] ?></div>
+                                            <div class="age">Estimated: <?php echo $pila_age[($j)+(3*$i)] ?></div>
+                                            <div class="code"><?php echo $pila_id[($j)+(3*$i)] ?></div>
+                                            </p>
+                                    </div>
+                                        <?php
+                                            }else{
+                                        ?>
                                     <a href="adopt-me.php"><div class="hover-animation one" data-text="ADOPT ME"></div></a>
                                     <div class="card-body">
-                                        <a href="adopt-me.php"><div class="card-title" id="adp-title"><?php echo $pila_name[($j)+(3*$i)] ?></div></a>
-                                        <p class="card-text">
-                                        <div class="gender"><?php echo $pila_gender[($j)+(3*$i)] ?></div>
-                                        <div class="age">Estimated: <?php echo $pila_age[($j)+(3*$i)] ?></div>
-                                        <div class="code"><?php echo $pila_id[($j)+(3*$i)] ?></div>
-                                        </p>
-                                    </div>
+                                            <a href="adopt-me.php"><div class="card-title" id="adp-title"><?php echo $pila_name[($j)+(3*$i)] ?></div></a>
+                                            <p class="card-text">
+                                            <div class="gender"><?php echo $pila_gender[($j)+(3*$i)] ?></div>
+                                            <div class="age">Estimated: <?php echo $pila_age[($j)+(3*$i)] ?></div>
+                                            <div class="code"><?php echo $pila_id[($j)+(3*$i)] ?></div>
+                                            </p>
+                                        </div>
+                                        <?php
+                                                }
+                                        ?>
+
                                 </div>
                             </div>
 
@@ -331,15 +365,36 @@
                             ?>
                                 <div class="col-lg-4 col-md-12">
                                     <div class="card w-75 card-a" style="width: 18rem;">
+
+                                    <?php
+                                    if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
+                                        $id = $_GET['id'];
+                                    ?>
+                                        <a href="adopt-me.php?sign_in=true&id=<?php echo $id?>"><div class="hover-animation one"  data-text="ADOPT ME"></div></a>
+                                        <div class="card-body">
+                                                <a href="adopt-me.php?sign_in=true&id=<?php echo $id?>"><div class="card-title" id="adp-title"><?php echo $pila_name[($h)+(3*$i)] ?></div></a>
+                                                <p class="card-text">
+                                                <div class="gender"><?php echo $pila_gender[($h)+(3*$i)] ?></div>
+                                                <div class="age">Estimated: <?php echo $pila_age[($h)+(3*$i)] ?></div>
+                                                <div class="code"><?php echo $pila_id[($h)+(3*$i)] ?></div>
+                                                </p>
+                                        </div>
+                                            <?php
+                                                }else{
+                                            ?>
                                         <a href="adopt-me.php"><div class="hover-animation one" data-text="ADOPT ME"></div></a>
                                         <div class="card-body">
-                                            <a href="adopt-me.php"><div class="card-title" id="adp-title"><?php echo $pila_name[($h)+(3*$i)] ?></div></a>
-                                            <p class="card-text">
-                                            <div class="gender"><?php echo $pila_gender[($h)+(3*$i)] ?></div>
-                                            <div class="age">Estimated: <?php echo $pila_age[($h)+(3*$i)] ?></div>
-                                            <div class="code"><?php echo $pila_id[($h)+(3*$i)] ?></div>
-                                            </p>
+                                                <a href="adopt-me.php"><div class="card-title" id="adp-title"><?php echo $pila_name[($h)+(3*$i)] ?></div></a>
+                                                <p class="card-text">
+                                                <div class="gender"><?php echo $pila_gender[($h)+(3*$i)] ?></div>
+                                                <div class="age">Estimated: <?php echo $pila_age[($h)+(3*$i)] ?></div>
+                                                <div class="code"><?php echo $pila_id[($h)+(3*$i)] ?></div>
+                                                </p>
                                         </div>
+                                            <?php
+                                            }
+                                            ?>
+
                                     </div>
                                 </div>
 
@@ -356,7 +411,7 @@
 
     ?>
 
-    <    <?php
+        <?php
     if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
         $id = $_GET['id'];
         ?>

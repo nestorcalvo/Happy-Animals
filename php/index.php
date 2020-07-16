@@ -77,14 +77,28 @@
             <h3 class="nav-title">ADOPT : </h3>
         </div>
 
-        <div class="col-lg-4 col-md-12">            
- 
-            <div class="multi-button">
-                <a href="adopt-a-pet.php?search=cats" ><button><img class="icon" src="../img/gatos.png" alt="cats"></button></a>
-                <a href="adopt-a-pet.php?search=dogs" ><button><img class="icon" src="../img/perro.png" alt="dogs"></button></a>
-                <a href="adopt-a-pet.php?search=bunny" ><button><img class="icon" src="../img/conejo.png" alt="bunnies"></button></a>
-            </div>
+        <div class="col-lg-4 col-md-12">
 
+            <?php
+                if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
+                $id = $_GET['id'];
+            ?>
+                <div class="multi-button">
+                    <a href="adopt-a-pet.php?search=cats&sign_in=true&id=<?php echo $id?>" ><button><img class="icon" src="../img/gatos.png" alt="cats"></button></a>
+                    <a href="adopt-a-pet.php?search=dogs&sign_in=true&id=<?php echo $id?>" ><button><img class="icon" src="../img/perro.png" alt="dogs"></button></a>
+                    <a href="adopt-a-pet.php?search=bunny&sign_in=true&id=<?php echo $id?>" ><button><img class="icon" src="../img/conejo.png" alt="bunnies"></button></a>
+                </div>
+            <?php
+                }else{
+            ?>
+                <div class="multi-button">
+                    <a href="adopt-a-pet.php?search=cats" ><button><img class="icon" src="../img/gatos.png" alt="cats"></button></a>
+                    <a href="adopt-a-pet.php?search=dogs" ><button><img class="icon" src="../img/perro.png" alt="dogs"></button></a>
+                    <a href="adopt-a-pet.php?search=bunny" ><button><img class="icon" src="../img/conejo.png" alt="bunnies"></button></a>
+                </div>
+            <?php
+                }
+            ?>
         </div>        
     </div>
 
