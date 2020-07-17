@@ -6,12 +6,14 @@
     <link rel="stylesheet" href="../css/style_admin.css">
 </head>
 <body>
-<ul>
-    <li><a href="../php/voluntarios_add.php">Voluntarios</a></li>
-    <li><a href="../php/solicitudes_add.php">Solicitudes para dar en adopción</a></li>
-    <li><a href="../php/adopcion_acept.php">Solicitudes adopción</a></li>
-    <li style="float:right"><a class="active" href="index.php" id="close_sesion">Cerrar sesion</a></li>
-</ul>
+    <nav>
+        <ul>
+            <li><a class="active"  href="../php/voluntarios_add.php">Voluntarios</a></li>
+            <li><a href="../php/solicitudes_add.php">Solicitudes para dar en adopción</a></li>
+            <li><a href="../php/adopcion_acept.php">Solicitudes adopción</a></li>
+            <li style="float:right"><a href="index.php" id="close_sesion">Cerrar sesion</a></li>
+        </ul>
+    </nav>
     <br>
     <table border = '2'>
         <tr>

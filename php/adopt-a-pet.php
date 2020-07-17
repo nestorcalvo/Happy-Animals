@@ -315,7 +315,7 @@
                                 <?php
                                 if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
                                     $id = $_GET['id'];
-                                    echo $pila_imagen[($j)+(3*$i)];
+
                                     if($pila_imagen[($j)+(3*$i)] == ''){
 
                                 ?>

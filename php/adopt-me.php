@@ -469,7 +469,8 @@
 <script type="text/javascript">
 
 function pop_box() {
-    swal("Oops!", "Something went wrong on the page!", "error");
+    swal("Congratulations", "Your request is being analyzed by an administrator, in case it is accepted you will receive" +
+        " an email with further instructions. Thank you for adopting with Happy Animals", "success");
 }
 function change() {
    
