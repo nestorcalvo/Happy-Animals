@@ -47,7 +47,7 @@ function indicarPosicion(position){
             var info = [info1,info2,info3,info4,info5,info6];
         var marcador=[];
         var pin;
-        var url = "icon\\";
+        var url = "../icon/";
         for( var i = 0; i < chinchetas.length; i++){
             pin = url + chinchetas[i].pin + ".png";
              
@@ -78,27 +78,27 @@ function indicarPosicion(position){
 
 function zoomIn(){
 	var opciones = {
-		url: "icon\\chinchetablue2.png",
+		url: "../icon/chinchetablue2.png",
 	} 
 	this.setIcon(opciones);
 }
 
 function zoomOut(){
 	var opciones = {
-		url: "icon\\chinchetablue.png",
+		url: "../icon/chinchetablue.png",
 	} 
 	this.setIcon(opciones);
 }
 
 function zoomOut2(){
 	var opciones = {
-		url: "icon\\chinchetared.png",
+		url: "../icon/chinchetared.png",
 	} 
 	this.setIcon(opciones);
 }
 
 function info1(event){
-    var contenido =  "<center><img src='icon\\safari.jpg' style='width:100px;height:60px;'</center>"+
+    var contenido =  "<center><img src='../icon/safari.jpg' style='width:100px;height:60px;'</center>"+
                     "<h3>Safari Clinica veterinaria</h3>"+
                     "<p>Direccion:"+ "Dg. 59 #32-111, Bello, Antioquia" + "</p>" +
                     "<p>Horario:"+ "Abierto las 24 horas" + "</p>" +
@@ -114,7 +114,7 @@ function info1(event){
 }
 
 function info2(event){
-    var contenido = "<center><img src='icon\\udea.jpg' style='width:100px;height:60px;'</center>"+
+    var contenido = "<center><img src='../icon/udea.jpg' style='width:100px;height:60px;'</center>"+
                     "<h3>Hospital Veterinario Universidad de Antioquia </h3>"+
                     "<p>Direccion:"+ "Cl. 65c, Medellín, Antioquia" + "</p>" +
                     "<p>Horario:"+ "lunes a sabados 08:00a17:30" + "</p>" +
@@ -130,7 +130,7 @@ function info2(event){
 }
 
 function info3(event){
-    var contenido = "<center><img src='icon\\catdog.jpg' style='width:100px;height:60px;'</center>"+
+    var contenido = "<center><img src='../icon/catdog.jpg' style='width:100px;height:60px;'</center>"+
                     "<h3>CatDog Centro Veterinario</h3>"+
                     "<p>Direccion:"+ "Cl. 50 # 81 a 47 segundo piso, Medellín, Antioquia" + "</p>" +
                     "<p>Horario:"+ " Abierto las 24 horas" + "</p>" +
@@ -146,7 +146,7 @@ function info3(event){
 }
 
 function info4(event){
-    var contenido = "<center><img src='icon\\remington.jpg' style='width:100px;height:60px;'</center>"+
+    var contenido = "<center><img src='../icon/remington.jpg' style='width:100px;height:60px;'</center>"+
                     "<h3>Clinica Veterinaria Uniremington</h3>"+
                     "<p>Direccion:"+ "Via Medellín-Via Sta. Elena, Medellín, Antioquia" + "</p>" +
                     "<p>Horario:"+ " lunes a sabados 08:00a17:00" + "</p>" +
@@ -162,7 +162,7 @@ function info4(event){
 }
 
 function info5(event){
-    var contenido = "<center><img src='icon\\veteclinica.jpg' style='width:100px;height:60px;'</center>"+
+    var contenido = "<center><img src='../icon/veteclinica.jpg' style='width:100px;height:60px;'</center>"+
                     "<h3>Veterinarias Itagüi - La Vete Clinica</h3>"+
                     "<p>Direccion:"+ "Calle 34 A # 54 - 40 Itagui, Itagüi, Antioquia" + "</p>" +
                     "<p>Horario:"+ "Abierto las 24 horas" + "</p>" +
@@ -178,7 +178,7 @@ function info5(event){
 }
 
 function info6(event){
-    var contenido = "<center><img src='icon\\ces.jpg' style='width:100px;height:60px;'</center>"+
+    var contenido = "<center><img src='../icon/ces.jpg' style='width:100px;height:60px;'</center>"+
                     "<h3>Centro veterinario CES</h3>"+
                     "<p>Direccion:"+ "Loma Del Escobero, Envigado, Antioquia" + "</p>" +
                     "<p>Horario:"+ "lunes a sabados 08:00a17:00" + "</p>" +
