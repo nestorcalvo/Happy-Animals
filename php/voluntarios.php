@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Voluntario</title>
+	<title>Happy Animals - Care Center</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../css/style5.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -142,37 +142,37 @@ session_start();
         </form>
         
         <div class="second-menu">
-        <div class="row">
-            <div class="col-lg-3 col-md-12">
-                <a href="" class="second-menu"><div class="second-menu-h">
-                    <img class="second-menu" src="img/paw.png" alt="HappyAnimals">
-                    <h3 class="second-menu">Adopt</h3>
-                    <p class="second-menu">Save a life today and add someone special to your family</p>
-                </div></a>
+            <div class="row">
+                <div class="col-lg-3 col-md-12">
+                    <a href="adopt-a-pet.php" class="second-menu"><div class="second-menu-h">
+                            <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
+                            <h3 class="second-menu">Adopt</h3>
+                            <p class="second-menu">Save a life today and add someone special to your family</p>
+                        </div></a>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <a href="" class="second-menu"><div class="second-menu-h">
+                            <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
+                            <h3 class="second-menu">Donate</h3>
+                            <p class="second-menu">Help give animals the life they deserve</p>
+                        </div></a>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <a href="mapa.php" class="second-menu"><div class="second-menu-h">
+                            <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
+                            <h3 class="second-menu">Low-Cost Clinics</h3>
+                            <p class="second-menu">Find directions here</p>
+                        </div></a>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <a href="voluntarios.php" class="second-menu"><div class="second-menu-h">
+                            <img class="second-menu" src="../img/paw.png" alt="HappyAnimals">
+                            <h3 class="second-menu">Volunteer</h3>
+                            <p class="second-menu">Help at the shelter or foster some furry friends</p>
+                        </div></a>
+                </div>
             </div>
-            <div class="col-lg-3 col-md-12">
-                <a href="" class="second-menu"><div class="second-menu-h">
-                    <img class="second-menu" src="img/paw.png" alt="HappyAnimals">
-                    <h3 class="second-menu">Donate</h3>
-                    <p class="second-menu">Help give animals the life they deserve</p>
-                </div></a>
-            </div>
-            <div class="col-lg-3 col-md-12">
-                <a href="mapa.php" class="second-menu"><div class="second-menu-h">
-                    <img class="second-menu" src="img/paw.png" alt="HappyAnimals">
-                    <h3 class="second-menu">Low-Cost Clinics</h3>
-                    <p class="second-menu">Find directions here</p>
-                </div></a>
-            </div>
-            <div class="col-lg-3 col-md-12">
-                <a href="php/voluntarios.php" class="second-menu"><div class="second-menu-h">
-                    <img class="second-menu" src="img/paw.png" alt="HappyAnimals">
-                    <h3 class="second-menu">Volunteer</h3>
-                    <p class="second-menu">Help at the shelter or foster some furry friends</p>
-                </div></a>
-            </div>
-        </div> 
-    </div>
+        </div>
 
     <footer>
         <div class="row mrg">
@@ -232,4 +232,25 @@ session_start();
     </div>
 
 </body>
+<script src="jquery-3.4.0.min.js"></script>
+
+
+<script type="text/javascript">
+
+function change() {
+   
+   if(document.getElementById("nav-button").value === "☰"){
+       document.getElementById("nav-button").value = "🞬";
+   }
+
+   else{
+       document.getElementById("nav-button").value = "☰";
+   }
+
+   $("li").toggle("slow");
+  
+}
+
+
+</script>
 </html>
