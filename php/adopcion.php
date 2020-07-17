@@ -300,7 +300,7 @@
                     <label for="microchip"> Microchip</label><br>
 
                     <br><label for="image_animal">Upload a picture</label><br>
-                    <input type="file" name="image_animal" id="image_animal" accept="image/*">
+                    <input type="file" name="file" id="file">
 
 
                     <input type="submit" id="submit_button" value="Send">

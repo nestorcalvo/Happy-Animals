@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../css/style3.css">
    
     <script type="text/javascript" src="../js/java.js" charset="UTF-8"></script>
-    <script src="jquery-3.4.0.min.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -213,18 +213,17 @@
 
     <div class="info">
         <div class="row mrg">
-            <div class="col-lg-4 col-md-12">
-                <img class="info" src="../img/adp8.jpg" alt="">
-            </div>
+
             <?php 
-            require_once"./conexionBDL.php";
+            require_once"conexionBDL.php";
             $mysql = conexionSQL();
 
             //tomar el id aqui
             //if(isset($_GET['id'])){
               //  $id=$_GET['id'];
-                  $id="1";
-                
+                if(isset($_GET['id_number'])) {
+                    $id = $_GET['id_number'];
+                }
 
                 $qv =("SELECT * FROM dar_adopcion WHERE id='$id' ");
                     $resultado = $mysql->query($qv); 
@@ -246,6 +245,9 @@
                       
                 //}
             ?>
+            <div class="col-lg-4 col-md-12">
+                <?php echo '<img class="info" src="data:image/png;base64,'.base64_encode($fila['img_animal']).'" />'; ?>
+            </div>
             <div class="col-lg-4 col-md-12">
                 <h2 class="info">Hi, my name is <?php echo $fila["nombre_animal"]; ?></h2>
                 <p class="info">I can come home with you today!</p>
@@ -462,7 +464,6 @@
     </div>
     
 </body>
-<script src="jquery-3.4.0.min.js"></script>
 
 
 <script type="text/javascript">

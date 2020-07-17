@@ -213,16 +213,17 @@
 
             <li class="dropdown">
                 <p class="filter">Type</p>
-                <select class="filter">
+                <select class="filter" id="type">
                     <option value="any">Any</option>
                     <option value="dog">Dog</option>
                     <option value="cat">Cat</option>
+                    <option value="cat">Bunny</option>
                 </select>
             </li>
 
             <li class="dropdown">
                 <p class="filter">Gender</p>
-                <select class="filter">
+                <select class="filter" id="gender">
                     <option value="any">Any</option>
                     <option value="m">Male</option>
                     <option value="f">Female</option>
@@ -231,17 +232,15 @@
 
             <li class="dropdown">
                 <p class="filter">Size</p>
-                <select class="filter">
+                <select class="filter" id="size">
                     <option value="any">Any</option>
                     <option value="sm">Small</option>
                     <option value="m">Medium</option>
                     <option value="l">Large</option>
-                    <option value="ktn">Kitten</option>
-                    <option value="py">Puppy</option>
                 </select>
             </li>
 
-            <button class="filter">SEARCH</button>
+            <button class="filter" onclick="search_function()">SEARCH</button>
 
             <li class="dropdown"><a href="#" class="filter"><img class="icon" src="../img/filter.png">Reset filters</a></li>
         </ul>
@@ -285,6 +284,7 @@
             $pila_name = array();
             $pila_gender = array();
             $pila_age = array();
+            $pila_imagen = array();
             while($rows = mysqli_fetch_assoc($ejecutar)){
                 $count = $count + 1;
 
@@ -292,6 +292,7 @@
                 array_push($pila_name, $rows['nombre_animal']);
                 array_push($pila_gender, $rows['sexo']);
                 array_push($pila_age, $rows['nacimiento_animal']);
+                array_push($pila_imagen, $rows['img_animal']);
 
             }
             $number_rows_exact = (int)($count/3);
@@ -312,11 +313,24 @@
                                 <div class="card w-75 card-a" style="width: 18rem;">
                                 <?php
                                 if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
-                                $id = $_GET['id'];
+                                    $id = $_GET['id'];
+                                    echo $pila_imagen[($j)+(3*$i)];
+                                    if($pila_imagen[($j)+(3*$i)] == ''){
+
                                 ?>
-                                    <a href="adopt-me.php?sign_in=true&id=<?php echo $id?>"><div class="hover-animation one" data-text="ADOPT ME"></div></a>
+
+                                    <a href="adopt-me.php?sign_in=true&id=<?php echo $id?>&id_number=<?php echo $pila_id[($j)+(3*$i)] ?>"><div class="hover-animation one" style="background-image: url(../img/no_image.jpg)" data-text="ADOPT ME"></div></a>
+                                <?php
+                                    }else{
+                                        $url_image = "data:image/png;base64,".base64_encode($pila_imagen[($j)+(3*$i)]);
+                                ?>
+                                    <a href="adopt-me.php?sign_in=true&id=<?php echo $id?>&id_number=<?php echo $pila_id[($j)+(3*$i)] ?>"><div class="hover-animation one" style="background-image: url(<?php echo $url_image?>)" data-text="ADOPT ME"></div></a>
+                                <?php
+                                    }
+                                ?>
+
                                     <div class="card-body">
-                                            <a href="adopt-me.php?sign_in=true&id=<?php echo $id?>"><div class="card-title" id="adp-title"><?php echo $pila_name[($j)+(3*$i)] ?></div></a>
+                                            <a href="adopt-me.php?sign_in=true&id=<?php echo $id?>&id_number=<?php echo $pila_id[($j)+(3*$i)] ?>"><div class="card-title" id="adp-title"><?php echo $pila_name[($j)+(3*$i)] ?></div></a>
                                             <p class="card-text">
                                             <div class="gender"><?php echo $pila_gender[($j)+(3*$i)] ?></div>
                                             <div class="age">Estimated: <?php echo $pila_age[($j)+(3*$i)] ?></div>
@@ -325,10 +339,16 @@
                                     </div>
                                         <?php
                                             }else{
+                                            if($pila_imagen[($j)+(3*$i)] == ''){
                                         ?>
-                                    <a href="adopt-me.php"><div class="hover-animation one" data-text="ADOPT ME"></div></a>
+                                            <a href="adopt-me.php?id_number=<?php echo $pila_id[($j)+(3*$i)] ?>"><div class="hover-animation one" style="background-image: url(../img/no_image.jpg)"  data-text="ADOPT ME"></div></a>
+                                        <?php }else{
+                                                $url_image = "data:image/png;base64,".base64_encode($pila_imagen[($j)+(3*$i)]);
+                                            ?>
+                                            <a href="adopt-me.php?id_number=<?php echo $pila_id[($j)+(3*$i)] ?>"><div class="hover-animation one" style="background-image: url(<?php echo $url_image?>)" data-text="ADOPT ME"></div></a>
+                                        <?php } ?>
                                     <div class="card-body">
-                                            <a href="adopt-me.php"><div class="card-title" id="adp-title"><?php echo $pila_name[($j)+(3*$i)] ?></div></a>
+                                            <a href="adopt-me.php?id_number=<?php echo $pila_id[($j)+(3*$i)] ?>"><div class="card-title" id="adp-title"><?php echo $pila_name[($j)+(3*$i)] ?></div></a>
                                             <p class="card-text">
                                             <div class="gender"><?php echo $pila_gender[($j)+(3*$i)] ?></div>
                                             <div class="age">Estimated: <?php echo $pila_age[($j)+(3*$i)] ?></div>
@@ -367,12 +387,23 @@
                                     <div class="card w-75 card-a" style="width: 18rem;">
 
                                     <?php
+
                                     if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
                                         $id = $_GET['id'];
+
+                                        if($pila_imagen[($h)+(3*$i)] == ''){
                                     ?>
-                                        <a href="adopt-me.php?sign_in=true&id=<?php echo $id?>"><div class="hover-animation one"  data-text="ADOPT ME"></div></a>
+                                        <a href="adopt-me.php?sign_in=true&id=<?php echo $id?>&id_number=<?php echo $pila_id[($h)+(3*$i)] ?>"><div class="hover-animation one" style="background-image: url(../img/no_image.jpg)" data-text="ADOPT ME"></div></a>
+                                        <?php
+                                    }else{
+                                            $url_image = "data:image/png;base64,".base64_encode($pila_imagen[($h)+(3*$i)]);
+                                        ?>
+                                        <a href="adopt-me.php?sign_in=true&id=<?php echo $id?>&id_number=<?php echo $pila_id[($h)+(3*$i)] ?>"><div class="hover-animation one" style="background-image: url(<?php echo $url_image?>)" data-text="ADOPT ME"></div></a>
+                                        <?php
+                                    }
+                                    ?>
                                         <div class="card-body">
-                                                <a href="adopt-me.php?sign_in=true&id=<?php echo $id?>"><div class="card-title" id="adp-title"><?php echo $pila_name[($h)+(3*$i)] ?></div></a>
+                                                <a href="adopt-me.php?sign_in=true&id=<?php echo $id?>&id_number=<?php echo $pila_id[($h)+(3*$i)] ?>"><div class="card-title" id="adp-title"><?php echo $pila_name[($h)+(3*$i)] ?></div></a>
                                                 <p class="card-text">
                                                 <div class="gender"><?php echo $pila_gender[($h)+(3*$i)] ?></div>
                                                 <div class="age">Estimated: <?php echo $pila_age[($h)+(3*$i)] ?></div>
@@ -381,10 +412,19 @@
                                         </div>
                                             <?php
                                                 }else{
+                                                    if($pila_imagen[($h)+(3*$i)] == ''){
                                             ?>
-                                        <a href="adopt-me.php"><div class="hover-animation one" data-text="ADOPT ME"></div></a>
+
+                                            <a href="adopt-me.php?id_number=<?php echo $pila_id[($h)+(3*$i)] ?>"><div class="hover-animation one" style="background-image: url(../img/no_image.jpg)" data-text="ADOPT ME"></div></a>
+                                                <?php
+                                            }else{
+                                                $url_image = "data:image/png;base64,".base64_encode($pila_imagen[($h)+(3*$i)]);
+                                                ?>
+                                            <a href="adopt-me.php?id_number=<?php echo $pila_id[($h)+(3*$i)] ?>"><div class="hover-animation one" style="background-image: url(<?php echo $url_image?>)" data-text="ADOPT ME"></div></a>
+
+                                            <?php } ?>
                                         <div class="card-body">
-                                                <a href="adopt-me.php"><div class="card-title" id="adp-title"><?php echo $pila_name[($h)+(3*$i)] ?></div></a>
+                                                <a href="adopt-me.php?id_number=<?php echo $pila_id[($h)+(3*$i)] ?>"><div class="card-title" id="adp-title"><?php echo $pila_name[($h)+(3*$i)] ?></div></a>
                                                 <p class="card-text">
                                                 <div class="gender"><?php echo $pila_gender[($h)+(3*$i)] ?></div>
                                                 <div class="age">Estimated: <?php echo $pila_age[($h)+(3*$i)] ?></div>
@@ -548,6 +588,7 @@
 
 
 <script type="text/javascript">
+
 
     function change() {
 
