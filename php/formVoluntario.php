@@ -103,6 +103,7 @@ session_start();
     </div>
     <nav>
         <ul class="nav-list">
+            <input type="button" value="🞬" id="nav-button" onclick="change()">
             <?php
             if((isset($_GET['sign_in']) && $_GET['sign_in'] == true)){
                 $id = $_GET['id'];
