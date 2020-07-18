@@ -130,13 +130,13 @@ if(isset($_POST['recuperar'])){
             $mail->isSMTP();                                            // Send using SMTP
             $mail->Host       = 'smtp.live.com';                    // Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-            $mail->Username   = 'mrc253@hotmail.com';                     // SMTP username
-            $mail->Password   = 'bobesponja5,';                               // SMTP password
+            $mail->Username   = '';                     // SMTP username
+            $mail->Password   = '';                               // SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
             $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
         
             //Recipients
-            $mail->setFrom('mrc253@hotmail.com', 'Happy Animals');
+            $mail->setFrom('', 'Happy Animals');
             $mail->addAddress($row['correo'], $row['nombre']);     // Add a recipient
         
             // Content
