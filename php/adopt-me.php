@@ -320,9 +320,9 @@
                     <p class="pet-info"><?php echo $fila["peso"]."Kg"; ?></p>
                     <hr class="pet-info">
                     <h4 class="pet-info">Status</h4>
-                    <p class="pet-info">Vacunado:<?php echo "&nbsp".$fila["vacunado"];?></p>
-                    <p class="pet-info">Desparacitado:<?php echo "&nbsp".$fila["desparacitado"];?></p>
-                    <p class="pet-info">Sano:<?php echo "&nbsp".$fila["sano"];?></p>
+                    <p class="pet-info">Vaccinated:<?php echo "&nbsp".$fila["vacunado"];?></p>
+                    <p class="pet-info">Dewormed:<?php echo "&nbsp".$fila["desparacitado"];?></p>
+                    <p class="pet-info">Healthy:<?php echo "&nbsp".$fila["sano"];?></p>
                     <p class="pet-info">Microchip:<?php echo "&nbsp".$fila["microchip"];?></p>
                     <hr class="pet-info">
                     <h4 class="pet-info">Pet ID</h4>
