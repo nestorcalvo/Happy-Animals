@@ -18,8 +18,6 @@
         echo $conectar->error;
     }
     else{
-        document.getElementById("add_admin").reset();
         echo "Usuario registrado correctamente";
-
     }
 ?>
