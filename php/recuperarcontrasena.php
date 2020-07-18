@@ -152,7 +152,7 @@ if(isset($_POST['recuperar'])){
         }
 
     }else{?>
-       <h4 class="text-center">Error: The email entered does not exist in our records</h4><br>
+       <h2 class="text-center">Error: The email entered does not exist in our records</h2><br>
        <?php  
     }
 
